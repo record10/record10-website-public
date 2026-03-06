@@ -1,0 +1,978 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v5.15.7"><!-- Favicon --><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><!-- SEO --><!-- Primary Meta Tags --><meta name="title" content="Record Flow Documentation | Record10"><meta name="description" content="Complete guide and documentation for Record Flow"><meta name="keywords" content="free software, business tools, restaurant management, restaurant pos, no-code automation, browser automation, web automation tool, automated testing, playwright alternative, selenium alternative, workflow automation, desktop automation, torrent client, video streaming torrent, desktop torrent app"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://record10.com/record-flow-docs/"><meta property="og:title" content="Record Flow Documentation | Record10"><meta property="og:description" content="Complete guide and documentation for Record Flow"><meta property="og:image" content="https://record10.com/og-image.png"><meta property="og:site_name" content="Record10"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://record10.com/record-flow-docs/"><meta property="twitter:title" content="Record Flow Documentation | Record10"><meta property="twitter:description" content="Complete guide and documentation for Record Flow"><meta property="twitter:image" content="https://record10.com/og-image.png"><meta property="twitter:site" content="@Record10"><meta property="twitter:creator" content="@Record10"><!-- Additional SEO --><meta name="robots" content="index, follow"><meta name="googlebot" content="index, follow"><meta name="theme-color" content="#000000"><!-- Canonical URL --><link rel="canonical" href="https://record10.com/record-flow-docs/"><title>Record Flow Documentation | Record10</title><!-- JSON-LD Structured Data for SEO --><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Record10","url":"https://record10.com","logo":"https://record10.com/RF-Logo-Square.png","sameAs":["https://github.com/Record10","https://twitter.com/Record10"],"description":"Free software solutions for professionals and businesses. Discover powerful tools for restaurant management, browser automation, and workflow optimization."}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Record Flow","applicationCategory":"DeveloperApplication","operatingSystem":["Windows","macOS","Linux"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"100"},"description":"Record Flow is a free no-code browser automation platform powered by Playwright. Build automated testing workflows, web scraping tasks, and QA automation without coding. Features control flow with loops, multi-tab automation, iframe support, and reusable flows. Perfect for testers, QA engineers, and developers who want a visual Selenium/Playwright alternative.","screenshot":"https://record10.com/og-image.png","softwareVersion":"1.0.0","url":"https://record10.com","downloadUrl":"https://github.com/Record10/record-flow/releases/latest","author":{"@type":"Organization","name":"Record10"}}</script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.QW52Ox2j.js"></script><!-- Preload fonts if you add custom fonts --><!-- <link rel="preload" href="/fonts/your-font.woff2" as="font" type="font/woff2" crossorigin> --><style>.prose pre{scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.2) transparent;padding:1.5rem;border-radius:.75rem;background-color:#00000080;border:1px solid rgba(255,255,255,.05)}.prose pre::-webkit-scrollbar{height:6px}.prose pre::-webkit-scrollbar-thumb{background-color:#fff3;border-radius:4px}.prose h3{color:#fff;font-weight:600;margin-top:2rem;margin-bottom:1rem}.bg-white\/5{background-color:#ffffff05;border:1px solid rgba(255,255,255,.05);border-radius:12px}
+</style>
+<link rel="stylesheet" href="/_astro/index.Cb9kp8wy.css"></head> <body class="bg-gray-900 text-white"> <canvas id="pixel-background" data-astro-cid-ym35iswo></canvas>  <script type="module">let r,d,p;function g(){r&&cancelAnimationFrame(r),d&&window.removeEventListener("resize",d),p&&window.removeEventListener("mousemove",p);const l=document.getElementById("pixel-background");if(!l)return;const t=l.getContext("2d");if(!t)return;const e={pixelSize:50,radiusMultiplier:.1,baseAlpha:.05,activeAlpha:.5,maxDistance:400,animationSpeed:.1,color:"255, 255, 255"};let o,c,u=[];const h={x:-1e3,y:-1e3};class f{x;y;size;baseAlpha;targetAlpha;currentAlpha;constructor(s,n,a){this.x=s,this.y=n,this.size=a,this.baseAlpha=e.baseAlpha,this.targetAlpha=e.baseAlpha,this.currentAlpha=e.baseAlpha}update(){const s=h.x,n=h.y+window.scrollY,a=s-(this.x+this.size/2),x=n-(this.y+this.size/2),w=Math.sqrt(a*a+x*x);if(w<e.maxDistance){const z=1-w/e.maxDistance;this.targetAlpha=e.baseAlpha+z*(e.activeAlpha-e.baseAlpha)}else this.targetAlpha=e.baseAlpha;this.currentAlpha+=(this.targetAlpha-this.currentAlpha)*e.animationSpeed}draw(){if(!t)return;t.beginPath(),t.fillStyle=`rgba(${e.color}, ${this.currentAlpha})`;const s=this.size*e.radiusMultiplier;t.arc(this.x+this.size/2,this.y+this.size/2,s,0,Math.PI*2),t.fill()}}function m(){u=[],o=window.innerWidth,c=document.documentElement.scrollHeight,l.width=o,l.height=c;const i=Math.ceil(o/e.pixelSize),s=Math.ceil(c/e.pixelSize);for(let n=0;n<i;n++)for(let a=0;a<s;a++)u.push(new f(n*e.pixelSize,a*e.pixelSize,e.pixelSize))}function A(){t&&(t.clearRect(0,0,o,c),u.forEach(i=>{i.update(),i.draw()}),r=requestAnimationFrame(A))}d=()=>{m()},p=i=>{h.x=i.clientX,h.y=i.clientY},window.addEventListener("resize",d),window.addEventListener("mousemove",p),m(),A()}document.addEventListener("astro:page-load",g);document.addEventListener("astro:before-swap",()=>{r&&cancelAnimationFrame(r)});</script> <header class="fixed w-full z-50 top-0 start-0 border-b border-gray-200/10 bg-gray-900/80 backdrop-blur-md"> <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-4 py-3"> <!-- Logo --> <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse"> <img src="/r10.svg" class="h-8" alt="Record10 Logo"> <span class="self-center text-xl font-semibold whitespace-nowrap text-white">Record10</span> </a> <!-- Mobile Menu Button --> <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false"> <span class="sr-only">Open main menu</span> <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path> </svg> </button> <!-- Navigation --> <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown"> <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-700 rounded-lg bg-gray-800 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent"> <!-- Products Dropdown --> <li class="relative"> <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-300 rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-green-400 md:p-0 transition-colors">
+Products
+<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path> </svg> </button> <!-- Dropdown Menu --> <div id="dropdownNavbar" class="z-50 hidden font-normal bg-gray-800 divide-y divide-gray-700 rounded-lg shadow-xl border border-gray-700 w-80 absolute top-full mt-2 left-0 md:left-auto md:-right-4"> <div class="p-2"> <!-- Record Bill Card --> <a href="/record-bill" class="block p-4 rounded-lg hover:bg-gray-700 transition-colors group"> <div class="flex items-start gap-4"> <div class="flex-shrink-0"> <img src="/record_bill.svg" alt="Record Bill" class="w-10 h-10 rounded bg-white border border-gray-600 p-1"> </div> <div> <div class="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">
+Record Bill
+</div> <div class="text-xs text-gray-400 mt-1 line-clamp-2"> All-in-one restaurant management software. Manage tables, take orders, generate bills, and track sales - all from one simple app. Perfect for restaurants, cafes, bars, and food courts. </div> <div class="mt-2 text-xs text-blue-400 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+Learn more
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </div> </div> </div> </a> <!-- Record Flow Card --> <a href="/record-flow" class="block p-4 rounded-lg hover:bg-gray-700 transition-colors group"> <div class="flex items-start gap-4"> <div class="flex-shrink-0"> <img src="/RF-Logo-Square.png" alt="Record Flow" class="w-10 h-10 rounded bg-gray-900 border border-gray-600 p-1"> </div> <div> <div class="text-sm font-semibold text-white group-hover:text-green-400 transition-colors">
+Record Flow
+</div> <div class="text-xs text-gray-400 mt-1 line-clamp-2">
+Browser automation tool for testing & workflows
+</div> <div class="mt-2 text-xs text-green-400 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+Download
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </div> </div> </div> </a> <!-- Record Tor Card --> <a href="/record-tor" class="block p-4 rounded-lg hover:bg-gray-700 transition-colors group"> <div class="flex items-start gap-4"> <div class="flex-shrink-0"> <img src="/record_tor.png" alt="Record Tor" class="w-10 h-10 rounded bg-gray-900 border border-gray-600 p-1"> </div> <div> <div class="text-sm font-semibold text-white group-hover:text-orange-400 transition-colors">
+Record Tor
+</div> <div class="text-xs text-gray-400 mt-1 line-clamp-2">
+Torrent client with built-in video streaming
+</div> <div class="mt-2 text-xs text-orange-400 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+Download
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </div> </div> </div> </a> </div> </div> </li> <li> <a href="https://github.com/Record10" target="_blank" class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-green-400 md:p-0 transition-colors">GitHub</a> </li> </ul> </div> </div> </header> <script type="module">function m(){console.log("Setting up dropdowns...");const n=document.querySelectorAll("[data-dropdown-toggle]"),d=document.querySelector('[data-collapse-toggle="navbar-dropdown"]'),r=document.getElementById("navbar-dropdown"),p=()=>{n.forEach(t=>{const e=t.getAttribute("data-dropdown-toggle");if(!e)return;const o=document.getElementById(e);o&&!o.classList.contains("hidden")&&o.classList.add("hidden")})},c=t=>{t.stopPropagation();const e=t.currentTarget,o=e.getAttribute("data-dropdown-toggle");if(!o)return;const a=document.getElementById(o);a&&(n.forEach(l=>{if(l!==e){const g=l.getAttribute("data-dropdown-toggle");if(g){const u=document.getElementById(g);u&&u.classList.add("hidden")}}}),a.classList.toggle("hidden"))},s=t=>{const e=t.target;e.closest("[data-dropdown-toggle]")||e.closest('[id^="dropdown"]')||p()},i=()=>{r&&r.classList.toggle("hidden")};document.removeEventListener("click",s),n.forEach(t=>t.removeEventListener("click",c)),d&&d.removeEventListener("click",i),n.forEach(t=>t.addEventListener("click",c)),document.addEventListener("click",s),d&&d.addEventListener("click",i)}document.addEventListener("astro:page-load",m);</script> <main class="pt-16">  <div class="min-h-screen text-white bg-[#0A0C10] relative" data-astro-cid-mr3wxiwq> <!-- Decorative glowing background --> <div class="absolute inset-0 overflow-hidden pointer-events-none z-0" data-astro-cid-mr3wxiwq> <div class="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-green-500/5 blur-[120px]" data-astro-cid-mr3wxiwq></div> <div class="absolute top-[40%] -right-[10%] w-[40%] h-[40%] rounded-full bg-blue-500/5 blur-[120px]" data-astro-cid-mr3wxiwq></div> </div> <!-- Header --> <div class="bg-gray-900/80 backdrop-blur-xl border-b border-white/10 sticky top-0 z-40" data-astro-cid-mr3wxiwq> <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between" data-astro-cid-mr3wxiwq> <div class="flex items-center gap-4" data-astro-cid-mr3wxiwq> <a href="/record-flow" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2 text-sm font-medium bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full border border-white/5" data-astro-cid-mr3wxiwq> <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-astro-cid-mr3wxiwq><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" data-astro-cid-mr3wxiwq></path></svg>
+Back to App
+</a> <h1 class="text-xl font-bold text-white hidden sm:block" data-astro-cid-mr3wxiwq>Record Flow Docs</h1> </div> <div class="flex items-center gap-4" data-astro-cid-mr3wxiwq> <button id="mobile-menu-btn" class="lg:hidden text-gray-400 hover:text-white p-2 bg-white/5 rounded-lg border border-white/5" data-astro-cid-mr3wxiwq> <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-astro-cid-mr3wxiwq><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" data-astro-cid-mr3wxiwq></path></svg> </button> </div> </div> </div> <!-- Main Content Layout --> <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" data-astro-cid-mr3wxiwq> <div class="flex flex-col lg:flex-row gap-12 pt-12 pb-24" data-astro-cid-mr3wxiwq> <!-- Sidebar Navigation --> <aside id="docs-sidebar" class="hidden lg:block w-full lg:w-72 shrink-0 transition-transform" data-astro-cid-mr3wxiwq> <div class="sticky top-28 bg-white/5 lg:bg-transparent p-6 lg:p-0 rounded-2xl border border-white/10 lg:border-none shadow-2xl lg:shadow-none" data-astro-cid-mr3wxiwq> <h3 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-6 pt-3 ps-3" data-astro-cid-mr3wxiwq>
+On this page
+</h3> <nav class="space-y-1 border-l border-white/5 lg:border-none pl-3 lg:pl-0" data-astro-cid-mr3wxiwq> <a href="#getting-started" class="nav-link block px-4 py-2.5 text-sm font-medium rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-colors" data-astro-cid-mr3wxiwq>Getting Started</a> <a href="#core-concepts" class="nav-link block px-4 py-2.5 text-sm font-medium rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-colors" data-astro-cid-mr3wxiwq>Core Concepts</a> <a href="#actions" class="nav-link block px-4 py-2.5 text-sm font-medium rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-colors" data-astro-cid-mr3wxiwq>All Actions</a> <a href="#variables" class="nav-link block px-4 py-2.5 text-sm font-medium rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-colors" data-astro-cid-mr3wxiwq>Variables System</a> <a href="#examples" class="nav-link block px-4 py-2.5 text-sm font-medium rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-colors" data-astro-cid-mr3wxiwq>Examples</a> <a href="#import-export" class="nav-link block px-4 py-2.5 text-sm font-medium rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-colors" data-astro-cid-mr3wxiwq>Import & Export</a> <a href="#troubleshooting" class="nav-link block px-4 py-2.5 text-sm font-medium rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-colors" data-astro-cid-mr3wxiwq>Troubleshooting</a> </nav> </div> </aside> <!-- Main Content Area --> <main class="flex-1 w-full min-w-0 xl:pr-32" data-astro-cid-mr3wxiwq> <div id="getting-started" class="scroll-mt-32 mb-28" data-astro-cid-mr3wxiwq> <div class="mb-10 border-b border-white/5 pb-6" data-astro-cid-mr3wxiwq> <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-emerald-400 to-blue-500" data-astro-cid-mr3wxiwq>
+Getting Started
+</h2> </div> <div class="prose prose-invert prose-lg max-w-none prose-headings:text-white prose-a:text-green-400 hover:prose-a:text-green-300 gap-y-6 flex flex-col" data-astro-cid-mr3wxiwq> <div class="prose prose-invert prose-lg max-w-none" data-astro-cid-mr3wxiwq> <!-- Installation --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6" data-astro-cid-mr3wxiwq>Installation</h2> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>System Requirements</h3> <ul class="space-y-2 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Operating Systems:</strong> macOS 10.13+, Windows 10+, Linux (Ubuntu 18.04+)
+</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>RAM:</strong> Minimum 4GB (8GB recommended)</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Disk Space:</strong> 500MB free space</li> </ul> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Download and Install</h3> <ol class="space-y-4 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Download Record Flow</strong> <p class="text-gray-300 mt-2" data-astro-cid-mr3wxiwq>
+Visit the <a href="/#download" class="text-brand-primary-400 hover:underline" data-astro-cid-mr3wxiwq>download page</a> and select your platform:
+</p> <ul class="ml-6 mt-2 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>macOS:</strong> Download the .dmg file</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Windows:</strong> Download the .exe installer</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Linux:</strong> Download the .deb or .AppImage file</li> </ul> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Install the Application</strong> <ul class="ml-6 mt-2 space-y-2" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>macOS:</strong> <ol class="ml-6 mt-2 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Open the downloaded .dmg file</li> <li data-astro-cid-mr3wxiwq>Drag Record Flow to your Applications folder</li> <li data-astro-cid-mr3wxiwq>Run this command in Terminal to allow the app to run:</li> </ol> <pre class="bg-gray-900 p-4 rounded-lg mt-2 text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>xattr -c /Applications/Record\ Flow.app</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Windows:</strong> <ol class="ml-6 mt-2 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Run the .exe installer</li> <li data-astro-cid-mr3wxiwq>Follow the installation wizard</li> <li data-astro-cid-mr3wxiwq>Launch Record Flow from the Start Menu</li> </ol> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Linux:</strong> <ul class="ml-6 mt-2 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>DEB:</strong> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>sudo dpkg -i record-flow_*.deb</code> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>AppImage:</strong> Make executable and run: <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>chmod +x Record-Flow-*.AppImage && ./Record-Flow-*.AppImage</code> </li> </ul> </li> </ul> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Launch Record Flow</strong> <p class="text-gray-300 mt-2" data-astro-cid-mr3wxiwq>
+Open the application from your Applications folder, Start Menu, or
+                        application launcher.
+</p> </li> </ol> </section> <!-- First Workflow --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6" data-astro-cid-mr3wxiwq>Creating Your First Workflow</h2> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Step 1: Create a Workspace</h3> <p class="mb-4" data-astro-cid-mr3wxiwq>Workspaces help you organize related flows together.</p> <ol class="space-y-2 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Click the <strong data-astro-cid-mr3wxiwq>workspace dropdown</strong> in the top menu</li> <li data-astro-cid-mr3wxiwq>Select <strong data-astro-cid-mr3wxiwq>"Create New Workspace"</strong></li> <li data-astro-cid-mr3wxiwq>Enter a name (e.g., "My First Workspace")</li> <li data-astro-cid-mr3wxiwq>Add an optional description</li> <li data-astro-cid-mr3wxiwq>Click <strong data-astro-cid-mr3wxiwq>"Create"</strong></li> </ol> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Step 2: Create a Flow</h3> <p class="mb-4" data-astro-cid-mr3wxiwq>Flows are individual automation sequences.</p> <ol class="space-y-2 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Click the <strong data-astro-cid-mr3wxiwq>"+ New Flow"</strong> button in the left sidebar</li> <li data-astro-cid-mr3wxiwq>Enter a flow name (e.g., "Google Search Test")</li> <li data-astro-cid-mr3wxiwq>Select a browser (Chrome or Edge)</li> <li data-astro-cid-mr3wxiwq>Add an optional description</li> <li data-astro-cid-mr3wxiwq>Click <strong data-astro-cid-mr3wxiwq>"Create"</strong></li> </ol> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Step 3: Add Actions</h3> <p class="mb-4" data-astro-cid-mr3wxiwq>Let's create a simple automation that searches Google:</p> <ol class="space-y-4 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Navigate to Google</strong> <ul class="ml-6 mt-2 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Click <strong data-astro-cid-mr3wxiwq>"Add Action"</strong></li> <li data-astro-cid-mr3wxiwq>Select <strong data-astro-cid-mr3wxiwq>"Navigate"</strong></li> <li data-astro-cid-mr3wxiwq>
+Enter URL: <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>https://www.google.com</code> </li> </ul> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Input Search Text</strong> <ul class="ml-6 mt-2 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Click <strong data-astro-cid-mr3wxiwq>"Add Action"</strong></li> <li data-astro-cid-mr3wxiwq>Select <strong data-astro-cid-mr3wxiwq>"Input Text"</strong></li> <li data-astro-cid-mr3wxiwq>
+Selector: <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>textarea[name="q"]</code> </li> <li data-astro-cid-mr3wxiwq>
+Text: <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>Record Flow automation</code> </li> </ul> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Press Enter</strong> <ul class="ml-6 mt-2 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Click <strong data-astro-cid-mr3wxiwq>"Add Action"</strong></li> <li data-astro-cid-mr3wxiwq>Select <strong data-astro-cid-mr3wxiwq>"Press Key"</strong></li> <li data-astro-cid-mr3wxiwq>Key: <strong data-astro-cid-mr3wxiwq>"Enter"</strong></li> </ul> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Wait for Results</strong> <ul class="ml-6 mt-2 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Click <strong data-astro-cid-mr3wxiwq>"Add Action"</strong></li> <li data-astro-cid-mr3wxiwq>Select <strong data-astro-cid-mr3wxiwq>"Wait"</strong></li> <li data-astro-cid-mr3wxiwq>Mode: <strong data-astro-cid-mr3wxiwq>"Element Visible"</strong></li> <li data-astro-cid-mr3wxiwq>
+Selector: <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>#search</code> </li> </ul> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Take Screenshot</strong> <ul class="ml-6 mt-2 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Click <strong data-astro-cid-mr3wxiwq>"Add Action"</strong></li> <li data-astro-cid-mr3wxiwq>Select <strong data-astro-cid-mr3wxiwq>"Screenshot"</strong></li> <li data-astro-cid-mr3wxiwq>Type: <strong data-astro-cid-mr3wxiwq>"Full Page"</strong></li> </ul> </li> </ol> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Step 4: Run Your Flow</h3> <ol class="space-y-2 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Click the <strong data-astro-cid-mr3wxiwq>"Run"</strong> button in the top toolbar</li> <li data-astro-cid-mr3wxiwq>Watch as Record Flow executes each action</li> <li data-astro-cid-mr3wxiwq>View real-time status updates for each step</li> <li data-astro-cid-mr3wxiwq>Check the results when complete</li> </ol> <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-6 mt-8" data-astro-cid-mr3wxiwq> <h4 class="text-xl font-semibold text-green-400 mb-2" data-astro-cid-mr3wxiwq>Congratulations!</h4> <p class="text-gray-300" data-astro-cid-mr3wxiwq>
+You've created and run your first automation workflow with Record Flow.
+</p> </div> </section> <!-- Understanding Selectors --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6" data-astro-cid-mr3wxiwq>Understanding Selectors</h2> <p class="mb-4" data-astro-cid-mr3wxiwq>
+Selectors tell Record Flow which element on the page to interact with. You can
+                    use:
+</p> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>CSS Selectors</h3> <pre class="bg-gray-900 p-4 rounded-lg mb-4 text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>#username          // ID selector
+.button             // Class selector
+input[type="text"]  // Attribute selector
+div &gt; button        // Child selector</pre> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>XPath</h3> <pre class="bg-gray-900 p-4 rounded-lg mb-4 text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>//button[@id="submit"]
+//input[@name="email"]
+//div[contains(@class, "modal")]</pre> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Text Selectors</h3> <pre class="bg-gray-900 p-4 rounded-lg mb-4 text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>text=Click Me        // Exact text match
+text=Sign In         // Button with "Sign In" text</pre> <div class="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6 mt-6" data-astro-cid-mr3wxiwq> <h4 class="text-xl font-semibold text-blue-400 mb-2" data-astro-cid-mr3wxiwq>Tip: Finding Selectors</h4> <p class="text-gray-300" data-astro-cid-mr3wxiwq>
+Use your browser's Developer Tools (F12) to inspect elements and copy their
+                      CSS selectors or XPath.
+</p> </div> </section> </div> </div> <div id="core-concepts" class="scroll-mt-32 mb-28" data-astro-cid-mr3wxiwq> <div class="mb-10 border-b border-white/5 pb-6" data-astro-cid-mr3wxiwq> <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-emerald-400 to-blue-500" data-astro-cid-mr3wxiwq>
+Core Concepts
+</h2> </div> <div class="prose prose-invert prose-lg max-w-none prose-headings:text-white prose-a:text-green-400 hover:prose-a:text-green-300 gap-y-6 flex flex-col" data-astro-cid-mr3wxiwq> <div class="prose prose-invert prose-lg max-w-none" data-astro-cid-mr3wxiwq> <!-- Workspaces --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6" data-astro-cid-mr3wxiwq>Workspaces</h2> <p class="mb-4" data-astro-cid-mr3wxiwq>
+Workspaces are containers that help you organize related flows together. Think
+                      of them as projects or folders for your automation work.
+</p> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Why Use Workspaces?</h3> <ul class="space-y-2 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Organization:</strong> Group related flows by project, client, or purpose
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Isolation:</strong> Each workspace has its own set of flows and workspace-level
+                        variables
+</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Context:</strong> Easily switch between different projects</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Scalability:</strong> Manage hundreds of flows across multiple workspaces
+</li> </ul> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Workspace Operations</h3> <div class="bg-white/5 border border-white/10 rounded-lg p-6 mb-6" data-astro-cid-mr3wxiwq> <ul class="space-y-2" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Create:</strong> Click the workspace dropdown and select "Create New
+                          Workspace"
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Switch:</strong> Use the workspace dropdown to switch between workspaces
+</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Rename:</strong> Right-click a workspace to rename it</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Delete:</strong> Right-click a workspace to delete it (all flows will
+                          be removed)
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Export:</strong> Export entire workspaces with all flows as JSON
+</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Import:</strong> Import workspaces from JSON files</li> </ul> </div> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Example Workspace Structure</h3> <pre class="bg-gray-900 p-4 rounded-lg text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>My Workspaces
+├── E-Commerce Testing
+│   ├── Login Flow
+│   ├── Checkout Flow
+│   └── Product Search Flow
+├── Data Scraping
+│   ├── News Scraper
+│   └── Price Monitor
+└── Personal Automation
+    ├── Daily Report
+    └── Email Tasks</pre> </section> <!-- Flows --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6" data-astro-cid-mr3wxiwq>Flows</h2> <p class="mb-4" data-astro-cid-mr3wxiwq>
+A flow is a sequence of actions that automate a specific task. Each flow
+                      represents one automation workflow.
+</p> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Flow Properties</h3> <div class="space-y-4 mb-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Name</h4> <p class="text-gray-300" data-astro-cid-mr3wxiwq>
+A descriptive name for your flow (e.g., "Login Test", "Scrape Product
+                          Data")
+</p> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Browser</h4> <p class="text-gray-300" data-astro-cid-mr3wxiwq>The browser to use: Chrome or Edge</p> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Description</h4> <p class="text-gray-300" data-astro-cid-mr3wxiwq>Optional notes about what the flow does</p> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Actions</h4> <p class="text-gray-300" data-astro-cid-mr3wxiwq>The sequence of steps to execute</p> </div> </div> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Flow Lifecycle</h3> <ol class="space-y-2 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Create:</strong> Define the flow name and browser</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Build:</strong> Add and configure actions</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Test:</strong> Run the flow and verify it works</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Refine:</strong> Adjust selectors, timeouts, or logic</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Execute:</strong> Run the flow whenever needed</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Maintain:</strong> Update when the target website changes</li> </ol> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Flow Operations</h3> <ul class="space-y-2 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Run:</strong> Execute the flow from start to finish</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Edit:</strong> Modify flow properties or actions</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Duplicate:</strong> Create a copy of a flow</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Export:</strong> Save flow as JSON file</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Import:</strong> Load flow from JSON file</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Delete:</strong> Remove the flow (can be undone immediately)</li> </ul> </section> <!-- Actions --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6" data-astro-cid-mr3wxiwq>Actions</h2> <p class="mb-4" data-astro-cid-mr3wxiwq>
+Actions are the individual steps in a flow. Each action performs one specific
+                      task like clicking a button, filling a form, or taking a screenshot.
+</p> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Action Categories</h3> <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Navigation (4)</h4> <p class="text-gray-300 text-sm" data-astro-cid-mr3wxiwq>
+Navigate, Go Back, Go Forward, Reload Page
+</p> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Form & Input (4)</h4> <p class="text-gray-300 text-sm" data-astro-cid-mr3wxiwq>
+Input Text, Clear Input, Select Dropdown, Press Key
+</p> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Mouse (6)</h4> <p class="text-gray-300 text-sm" data-astro-cid-mr3wxiwq>
+Click, Double Click, Right Click, Hover, Focus, Blur
+</p> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Checkbox & Radio (2)</h4> <p class="text-gray-300 text-sm" data-astro-cid-mr3wxiwq>Checkbox, Radio Button</p> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Scroll (3)</h4> <p class="text-gray-300 text-sm" data-astro-cid-mr3wxiwq>
+Scroll to Element, Scroll to Top, Scroll to Bottom
+</p> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Data (4)</h4> <p class="text-gray-300 text-sm" data-astro-cid-mr3wxiwq>
+Assert, Get Text, Get Attribute, Screenshot
+</p> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Advanced (5)</h4> <p class="text-gray-300 text-sm" data-astro-cid-mr3wxiwq>
+File Upload, Set Viewport, Set Cookie, Drag & Drop, Wait
+</p> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Tab & Frame (6)</h4> <p class="text-gray-300 text-sm" data-astro-cid-mr3wxiwq>Tab operations, Frame switching</p> </div> </div> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Action Execution</h3> <p class="mb-4" data-astro-cid-mr3wxiwq>Actions execute sequentially from top to bottom:</p> <ol class="space-y-2 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Action 1 completes</li> <li data-astro-cid-mr3wxiwq>Action 2 starts and completes</li> <li data-astro-cid-mr3wxiwq>Action 3 starts and completes</li> <li data-astro-cid-mr3wxiwq>And so on until all actions finish</li> </ol> <div class="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6 mb-6" data-astro-cid-mr3wxiwq> <h4 class="text-xl font-semibold text-blue-400 mb-2" data-astro-cid-mr3wxiwq>Execution Order</h4> <p class="text-gray-300" data-astro-cid-mr3wxiwq>
+You can reorder actions by dragging and dropping them in the flow editor.
+</p> </div> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Action Status</h3> <p class="mb-4" data-astro-cid-mr3wxiwq>During execution, each action shows its status:</p> <ul class="space-y-2 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Pending:</strong> Waiting to execute</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Running:</strong> Currently executing</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Success:</strong> Completed successfully</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Failed:</strong> Encountered an error</li> </ul> </section> <!-- Selectors --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6" data-astro-cid-mr3wxiwq>Selectors</h2> <p class="mb-4" data-astro-cid-mr3wxiwq>
+Selectors identify which element on the page an action should interact with.
+                      Record Flow supports multiple selector types.
+</p> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Selector Types</h3> <div class="space-y-6 mb-6" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq> <h4 class="text-xl font-semibold mb-2" data-astro-cid-mr3wxiwq>CSS Selectors</h4> <p class="text-gray-300 mb-2" data-astro-cid-mr3wxiwq>
+The most common and recommended selector type:
+</p> <pre class="bg-gray-900 p-4 rounded-lg text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>#username                  // By ID
+.btn-primary               // By class
+button[type="submit"]      // By attribute
+div.container &gt; button     // Child selector
+input[name="email"]        // Attribute value</pre> </div> <div data-astro-cid-mr3wxiwq> <h4 class="text-xl font-semibold mb-2" data-astro-cid-mr3wxiwq>XPath</h4> <p class="text-gray-300 mb-2" data-astro-cid-mr3wxiwq>
+Powerful but more complex selector language:
+</p> <pre class="bg-gray-900 p-4 rounded-lg text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>//button[@id="submit"]
+//input[@name="email"]
+//div[contains(@class, "modal")]
+//span[text()="Click Me"]</pre> </div> <div data-astro-cid-mr3wxiwq> <h4 class="text-xl font-semibold mb-2" data-astro-cid-mr3wxiwq>Text Selectors</h4> <p class="text-gray-300 mb-2" data-astro-cid-mr3wxiwq>Find elements by their visible text:</p> <pre class="bg-gray-900 p-4 rounded-lg text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>text=Sign In              // Exact text
+text=Submit               // Button text</pre> </div> <div data-astro-cid-mr3wxiwq> <h4 class="text-xl font-semibold mb-2" data-astro-cid-mr3wxiwq>ID Selectors</h4> <p class="text-gray-300 mb-2" data-astro-cid-mr3wxiwq>Simple ID-based selection:</p> <pre class="bg-gray-900 p-4 rounded-lg text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>id=username
+id=submit-btn</pre> </div> </div> <div class="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h4 class="text-xl font-semibold text-yellow-400 mb-2" data-astro-cid-mr3wxiwq>
+Selector Best Practices
+</h4> <ul class="text-gray-300 space-y-1 mt-2" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Use IDs when available (most stable)</li> <li data-astro-cid-mr3wxiwq>Prefer CSS selectors over XPath (faster, simpler)</li> <li data-astro-cid-mr3wxiwq>Avoid overly specific selectors that break easily</li> <li data-astro-cid-mr3wxiwq>Test selectors in browser DevTools first</li> </ul> </div> </section> <!-- Variables --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6" data-astro-cid-mr3wxiwq>Variables</h2> <p class="mb-4" data-astro-cid-mr3wxiwq>
+Variables let you store and reuse data across actions within your flows. They
+                      make your automations dynamic and reusable.
+</p> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Variable Scopes</h3> <div class="space-y-4 mb-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Global Variables</h4> <p class="text-gray-300" data-astro-cid-mr3wxiwq>
+Available across all workspaces and flows. Perfect for credentials, API
+                          keys, or shared constants.
+</p> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Workspace Variables</h4> <p class="text-gray-300" data-astro-cid-mr3wxiwq>
+Available to all flows within a workspace. Great for project-specific
+                          configuration.
+</p> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Flow Variables</h4> <p class="text-gray-300" data-astro-cid-mr3wxiwq>
+Only available within a specific flow. Used for flow-specific data.
+</p> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Runtime Variables</h4> <p class="text-gray-300" data-astro-cid-mr3wxiwq>
+Created during flow execution (e.g., extracted text, attributes).
+                          Temporary.
+</p> </div> </div> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Using Variables</h3> <p class="mb-4" data-astro-cid-mr3wxiwq>Reference variables using double curly braces:</p> <pre class="bg-gray-900 p-4 rounded-lg text-sm overflow-x-auto mb-4" data-astro-cid-mr3wxiwq>{{username}}           // Use the username variable
+{{apiUrl}}/users     // Concatenate with text
+{{searchTerm}}        // Dynamic search input</pre> <div class="bg-white/5 border border-white/10 rounded-lg p-6 mb-6" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-3" data-astro-cid-mr3wxiwq>Example: Login Flow with Variables</h4> <ol class="space-y-2 text-gray-300" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>
+1. Create global variables: <code data-astro-cid-mr3wxiwq>username</code>, <code data-astro-cid-mr3wxiwq>password</code> </li> <li data-astro-cid-mr3wxiwq>2. Navigate action: <code data-astro-cid-mr3wxiwq>{{loginUrl}}</code></li> <li data-astro-cid-mr3wxiwq>
+3. Input Text: Selector <code data-astro-cid-mr3wxiwq>#username</code>, Value <code data-astro-cid-mr3wxiwq>{{username}}</code> </li> <li data-astro-cid-mr3wxiwq>
+4. Input Text: Selector <code data-astro-cid-mr3wxiwq>#password</code>, Value <code data-astro-cid-mr3wxiwq>{{password}}</code> </li> <li data-astro-cid-mr3wxiwq>5. Click: Selector <code data-astro-cid-mr3wxiwq>button[type="submit"]</code></li> </ol> </div> <p class="text-gray-300" data-astro-cid-mr3wxiwq>
+Learn more in the <a href="#variables" class="text-brand-primary-400 hover:underline" data-astro-cid-mr3wxiwq>Variables & Data documentation</a>.
+</p> </section> <!-- Execution Model --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6" data-astro-cid-mr3wxiwq>Execution Model</h2> <p class="mb-4" data-astro-cid-mr3wxiwq>
+Understanding how Record Flow executes your flows helps you build reliable
+                      automations.
+</p> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Flow Execution Steps</h3> <ol class="space-y-3 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>1. Initialization</strong> <p class="text-gray-300 ml-6" data-astro-cid-mr3wxiwq>
+Launch the selected browser, resolve all variables
+</p> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>2. Sequential Execution</strong> <p class="text-gray-300 ml-6" data-astro-cid-mr3wxiwq>Execute actions one by one in order</p> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>3. Element Location</strong> <p class="text-gray-300 ml-6" data-astro-cid-mr3wxiwq>
+For each action, find the target element using the selector
+</p> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>4. Action Performance</strong> <p class="text-gray-300 ml-6" data-astro-cid-mr3wxiwq>Perform the action (click, type, etc.)</p> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>5. Status Update</strong> <p class="text-gray-300 ml-6" data-astro-cid-mr3wxiwq>Update UI with success or failure status</p> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>6. Cleanup</strong> <p class="text-gray-300 ml-6" data-astro-cid-mr3wxiwq>Close browser, report final status</p> </li> </ol> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Error Handling</h3> <p class="mb-4" data-astro-cid-mr3wxiwq>If an action fails:</p> <ul class="space-y-2 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>The flow stops immediately</li> <li data-astro-cid-mr3wxiwq>The failed action is highlighted</li> <li data-astro-cid-mr3wxiwq>An error message is displayed</li> <li data-astro-cid-mr3wxiwq>The browser remains open for debugging</li> </ul> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Context Management</h3> <p class="mb-4" data-astro-cid-mr3wxiwq>Record Flow maintains context for:</p> <ul class="space-y-2 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Pages:</strong> The main browser page</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Tabs:</strong> Multiple browser tabs</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Frames:</strong> iframes within pages</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Variables:</strong> All variable scopes</li> </ul> </section> </div> </div> <div id="actions" class="scroll-mt-32 mb-28" data-astro-cid-mr3wxiwq> <div class="mb-10 border-b border-white/5 pb-6" data-astro-cid-mr3wxiwq> <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-emerald-400 to-blue-500" data-astro-cid-mr3wxiwq>
+All Actions
+</h2> </div> <div class="prose prose-invert prose-lg max-w-none prose-headings:text-white prose-a:text-green-400 hover:prose-a:text-green-300 gap-y-6 flex flex-col" data-astro-cid-mr3wxiwq> <div class="space-y-12" data-astro-cid-mr3wxiwq> <!-- Navigation Actions --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Navigation Actions
+</h2> <div class="space-y-8" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Navigate (goto)</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Navigate to a specified URL</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>url</code> - The URL to navigate
+                                to (required)
+</li> </ul> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Example:</strong></div> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>URL: https://example.com</pre> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Go Back</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Navigate to the previous page in browser history
+</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong> None</div> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Go Forward</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Navigate to the next page in browser history
+</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong> None</div> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Reload Page</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Refresh the current page</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong> None</div> </div> </div> </div> </section> <!-- Form & Input Actions --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Form & Input Actions
+</h2> <div class="space-y-8" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Input Text</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Type text into an input field</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>selector</code> - Element
+                                selector (CSS, XPath, ID, or text)
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>text</code> - Text to input
+                                (supports variables)
+</li> </ul> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Example:</strong></div> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>Selector: #email
+Text: user@example.com</pre> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Clear Input</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Clear the value of an input field</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>selector</code> - Element
+                                selector
+</li> </ul> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Select Dropdown</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Select an option from a dropdown</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>selector</code> - Dropdown
+                                selector
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>value</code> - Option value
+                                to select
+</li> </ul> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Example:</strong></div> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>Selector: select[name="country"]
+Value: USA</pre> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Press Key</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Press a keyboard key</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>key</code> - Key to press
+                                (Enter, Escape, Tab, etc.)
+</li> </ul> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Common Keys:</strong></div> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>Enter, Escape, Tab, Backspace, Delete,
+ArrowUp, ArrowDown, ArrowLeft, ArrowRight</pre> </div> </div> </div> </section> <!-- Mouse Actions --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Mouse Actions
+</h2> <div class="space-y-8" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Click</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Click an element</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>selector</code> - Element
+                                to click
+</li> </ul> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Double Click</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Double-click an element</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>selector</code> - Element
+                                to double-click
+</li> </ul> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Right Click</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Right-click an element (context menu)</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>selector</code> - Element
+                                to right-click
+</li> </ul> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Hover</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Move mouse over an element</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>selector</code> - Element
+                                to hover over
+</li> </ul> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Focus Element</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Set focus on an element</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>selector</code> - Element
+                                to focus
+</li> </ul> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Blur Element</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Remove focus from an element</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>selector</code> - Element
+                                to blur
+</li> </ul> </div> </div> </div> </section> <!-- Checkbox & Radio --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Checkbox & Radio Actions
+</h2> <div class="space-y-8" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Checkbox</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Check, uncheck, or toggle a checkbox</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>selector</code> - Checkbox
+                                selector
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>operation</code> - check,
+                                uncheck, or toggle
+</li> </ul> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Radio Button</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Select or toggle a radio button</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>selector</code> - Radio button
+                                selector
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>operation</code> - select
+                                or toggle
+</li> </ul> </div> </div> </div> </section> <!-- Scroll Actions --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Scroll Actions
+</h2> <div class="space-y-8" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Scroll to Element</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Scroll element into view</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>selector</code> - Element
+                                to scroll to
+</li> </ul> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Scroll to Top</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Scroll to the top of the page</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong> None</div> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Scroll to Bottom</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Scroll to the bottom of the page</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong> None</div> </div> </div> </div> </section> <!-- Data Extraction --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Data Extraction Actions
+</h2> <div class="space-y-8" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Assert</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Verify conditions and text on the page</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>operation</code> - Type of
+                                assertion (equals, contains, visible, etc.)
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>selector</code> - Element
+                                to verify (optional for some operations)
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>value</code> - Expected value
+</li> </ul> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Operations:</strong></div> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>equals, contains, matches, visible, hidden,
+enabled, disabled, checked, unchecked,
+url, title, attribute, count</pre> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Get Element Text</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Extract text from an element and store in a variable
+</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>selector</code> - Element
+                                to get text from
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>variableName</code> - Variable
+                                to store result
+</li> </ul> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Get Element Attribute</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Extract an attribute value from an element
+</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>selector</code> - Element
+                                to get attribute from
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>attribute</code> - Attribute
+                                name (href, src, class, etc.)
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>variableName</code> - Variable
+                                to store result
+</li> </ul> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Screenshot</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Take a screenshot of the page or element</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>type</code> - Full page or
+                                element
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>selector</code> - Element
+                                selector (if type is element)
+</li> </ul> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Drag & Drop</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Drag an element to a target location</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>sourceSelector</code> - Element
+                                to drag
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>targetSelector</code> - Drop
+                                target
+</li> </ul> </div> </div> </div> </section> <!-- Advanced Actions --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Advanced Actions
+</h2> <div class="space-y-8" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>File Upload</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Upload a file through an input element</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>selector</code> - File input
+                                selector
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>filePath</code> - Absolute
+                                path to file
+</li> </ul> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Set Viewport</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Change browser window size for device emulation
+</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>width</code> - Width in pixels
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>height</code> - Height in
+                                pixels
+</li> </ul> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Common Viewports:</strong></div> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>Desktop: 1920x1080
+Laptop: 1366x768
+Tablet: 768x1024
+Mobile: 375x667</pre> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Set Cookie</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Add a cookie to the browser</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>name</code> - Cookie name
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>value</code> - Cookie value
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>domain</code> - Cookie domain
+                                (optional)
+</li> </ul> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Wait</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Wait for various conditions</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>mode</code> - Wait type (timeout,
+                                element, navigation, etc.)
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>selector</code> - Element
+                                selector (for element waits)
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>value</code> - Duration or
+                                expected value
+</li> </ul> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Wait Modes:</strong></div> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>timeout, element_visible, element_hidden,
+element_attached, element_detached,
+navigation, url_equals, url_contains,
+load, domcontentloaded, networkidle</pre> </div> </div> </div> </section> <!-- Tab Actions --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Tab Management Actions
+</h2> <div class="space-y-8" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Open New Tab</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Open a new browser tab</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>url</code> - URL to open (optional)
+</li> </ul> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Switch to Tab</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Switch to a specific tab by index</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>tabIndex</code> - Tab index
+                                (0-based)
+</li> </ul> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Close Tab</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Close the current tab</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong> None</div> </div> </div> </div> </section> <!-- Frame Actions --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Frame Actions
+</h2> <div class="space-y-8" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Switch to Frame</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Switch context to an iframe</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>selector</code> - iframe selector
+</li> </ul> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Switch to Parent Frame</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Exit current iframe to parent</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong> None</div> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Switch to Main Frame</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Return to main page context</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong> None</div> </div> </div> </div> </section> <!-- Browser Control --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Browser Control
+</h2> <div class="space-y-8" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Quit</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Close the browser and end flow execution</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Parameters:</strong> None</div> </div> </div> </div> </section> </div> </div> <div id="variables" class="scroll-mt-32 mb-28" data-astro-cid-mr3wxiwq> <div class="mb-10 border-b border-white/5 pb-6" data-astro-cid-mr3wxiwq> <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-emerald-400 to-blue-500" data-astro-cid-mr3wxiwq>
+Variables System
+</h2> </div> <div class="prose prose-invert prose-lg max-w-none prose-headings:text-white prose-a:text-green-400 hover:prose-a:text-green-300 gap-y-6 flex flex-col" data-astro-cid-mr3wxiwq> <div class="space-y-12" data-astro-cid-mr3wxiwq> <!-- Introduction --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+What are Variables?
+</h2> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Variables allow you to store and reuse data throughout your flows. They
+                          make your automations dynamic, reusable, and easier to maintain.
+</p> <div class="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6 mb-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold text-blue-400 mb-2" data-astro-cid-mr3wxiwq>Key Benefits</h3> <ul class="space-y-2 text-gray-300" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Dynamic Workflows:</strong> Use different data without changing
+                              the flow
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Data Reuse:</strong> Extract data once, use it multiple times
+</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Easy Maintenance:</strong> Update values in one place</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Sensitive Data:</strong> Store credentials and API keys securely
+</li> </ul> </div> </section> <!-- Variable Scopes --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Variable Scopes
+</h2> <p class="text-gray-300 mb-6" data-astro-cid-mr3wxiwq>
+Record Flow supports four variable scopes, each with different
+                          availability and use cases.
+</p> <div class="space-y-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Global Variables</h3> <div class="mb-4" data-astro-cid-mr3wxiwq> <span class="inline-block bg-green-600/20 text-green-400 text-sm px-3 py-1 rounded-full border border-green-600/30" data-astro-cid-mr3wxiwq>
+Available Everywhere
+</span> </div> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Global variables are accessible across all workspaces and flows in
+                              your Record Flow installation.
+</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Best For:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>User credentials (username, password)</li> <li data-astro-cid-mr3wxiwq>API keys and tokens</li> <li data-astro-cid-mr3wxiwq>Base URLs used across multiple projects</li> <li data-astro-cid-mr3wxiwq>Common configuration values</li> </ul> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Example:</strong></div> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>Name: apiKey
+Value: sk_test_1234567890
+Scope: Global</pre> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Workspace Variables</h3> <div class="mb-4" data-astro-cid-mr3wxiwq> <span class="inline-block bg-blue-600/20 text-blue-400 text-sm px-3 py-1 rounded-full border border-blue-600/30" data-astro-cid-mr3wxiwq>
+Available in Workspace
+</span> </div> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Workspace variables are available to all flows within a specific
+                              workspace.
+</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Best For:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Project-specific URLs</li> <li data-astro-cid-mr3wxiwq>Environment-specific settings (dev, staging, prod)</li> <li data-astro-cid-mr3wxiwq>Shared test data for related flows</li> <li data-astro-cid-mr3wxiwq>Client-specific configuration</li> </ul> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Example:</strong></div> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>Name: baseUrl
+Value: https://staging.example.com
+Scope: E-Commerce Testing (workspace)</pre> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Flow Variables</h3> <div class="mb-4" data-astro-cid-mr3wxiwq> <span class="inline-block bg-purple-600/20 text-purple-400 text-sm px-3 py-1 rounded-full border border-purple-600/30" data-astro-cid-mr3wxiwq>
+Available in Flow
+</span> </div> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Flow variables are only available within a specific flow.
+</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Best For:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Flow-specific test data</li> <li data-astro-cid-mr3wxiwq>Temporary configuration</li> <li data-astro-cid-mr3wxiwq>Flow-unique parameters</li> <li data-astro-cid-mr3wxiwq>Isolated testing values</li> </ul> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Example:</strong></div> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>Name: testEmail
+Value: user@test.com
+Scope: Login Flow (flow)</pre> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Runtime Variables</h3> <div class="mb-4" data-astro-cid-mr3wxiwq> <span class="inline-block bg-orange-600/20 text-orange-400 text-sm px-3 py-1 rounded-full border border-orange-600/30" data-astro-cid-mr3wxiwq>
+Created During Execution
+</span> </div> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Runtime variables are created automatically during flow execution when
+                              you extract data from the page.
+</p> <div class="space-y-2" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Created By:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Get Element Text action</li> <li data-astro-cid-mr3wxiwq>Get Element Attribute action</li> <li data-astro-cid-mr3wxiwq>Data extraction operations</li> </ul> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Characteristics:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Temporary - only exist during flow execution</li> <li data-astro-cid-mr3wxiwq>Not persisted after flow completes</li> <li data-astro-cid-mr3wxiwq>Can be used in subsequent actions within same flow</li> </ul> </div> </div> </div> </section> <!-- Using Variables --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Using Variables
+</h2> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Syntax</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Reference variables using double curly braces:
+</p> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto mb-6" data-astro-cid-mr3wxiwq>{{variableName}}</pre> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>In Actions</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Variables can be used in any action parameter that accepts text:
+</p> <div class="space-y-4 mb-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Navigate Action</h4> <pre class="bg-gray-900 p-3 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>URL: {{baseUrl}}/login</pre> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Input Text Action</h4> <pre class="bg-gray-900 p-3 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>Selector: #username
+Text: {{username}}</pre> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Assert Action</h4> <pre class="bg-gray-900 p-3 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>Operation: url_contains
+Value: {{expectedPath}}</pre> </div> </div> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Concatenation</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Combine variables with text:</p> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto mb-6" data-astro-cid-mr3wxiwq>{{baseUrl}}/api/users/{{userId}}
+Welcome, {{firstName}} {{lastName}}!</pre> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Resolution Priority</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+When multiple variables have the same name, Record Flow resolves them in
+                          this order:
+</p> <ol class="ml-6 text-gray-300 space-y-2 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>1. Runtime Variables</strong> - Created during execution (highest
+                            priority)
+</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>2. Flow Variables</strong> - Defined in the current flow</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>3. Workspace Variables</strong> - Defined in the current workspace
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>4. Global Variables</strong> - Defined globally (lowest priority)
+</li> </ol> </section> <!-- Creating Variables --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Creating & Managing Variables
+</h2> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Creating Variables</h3> <ol class="space-y-3 text-gray-300 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>1. Open Variables Panel</strong> - Click the Variables icon in the
+                            sidebar
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>2. Select Scope</strong> - Choose Global, Workspace, or Flow tab
+</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>3. Click "Add Variable"</strong></li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>4. Configure Variable:</strong> <ul class="ml-6 mt-2 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>Name</code> - Variable identifier
+                                (no spaces)
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>Value</code> - The data to
+                                store
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>Type</code> - String, number,
+                                boolean, or JSON
+</li> <li data-astro-cid-mr3wxiwq> <code class="bg-gray-900 px-2 py-1 rounded" data-astro-cid-mr3wxiwq>Secret</code> - Mark as sensitive
+                                (masks value)
+</li> </ul> </li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>5. Save Variable</strong></li> </ol> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Variable Types</h3> <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>String</h4> <p class="text-gray-300 text-sm mb-2" data-astro-cid-mr3wxiwq>Text values</p> <pre class="bg-gray-900 p-2 rounded text-xs" data-astro-cid-mr3wxiwq>Hello World</pre> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Number</h4> <p class="text-gray-300 text-sm mb-2" data-astro-cid-mr3wxiwq>Numeric values</p> <pre class="bg-gray-900 p-2 rounded text-xs" data-astro-cid-mr3wxiwq>42</pre> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>Boolean</h4> <p class="text-gray-300 text-sm mb-2" data-astro-cid-mr3wxiwq>True/false values</p> <pre class="bg-gray-900 p-2 rounded text-xs" data-astro-cid-mr3wxiwq>true</pre> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2" data-astro-cid-mr3wxiwq>JSON</h4> <p class="text-gray-300 text-sm mb-2" data-astro-cid-mr3wxiwq>Structured data</p> <pre class="bg-gray-900 p-2 rounded text-xs" data-astro-cid-mr3wxiwq>{&quot;key&quot;: &quot;value&quot;}</pre> </div> </div> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Secret Variables</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Mark variables as secret to hide their values in the UI:
+</p> <div class="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-6 mb-6" data-astro-cid-mr3wxiwq> <h4 class="text-xl font-semibold text-yellow-400 mb-2" data-astro-cid-mr3wxiwq>
+Security Best Practices
+</h4> <ul class="space-y-2 text-gray-300" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Always mark passwords as secret</li> <li data-astro-cid-mr3wxiwq>Mark API keys and tokens as secret</li> <li data-astro-cid-mr3wxiwq>Never commit variables with sensitive data to version control</li> <li data-astro-cid-mr3wxiwq>Use environment-specific variables for different stages</li> </ul> </div> </section> <!-- Extracting Data --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Extracting Data into Variables
+</h2> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Get Element Text</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Extract text from an element and store it in a runtime variable:
+</p> <div class="bg-white/5 border border-white/10 rounded-lg p-6 mb-6" data-astro-cid-mr3wxiwq> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>Action: Get Element Text
+Selector: .product-price
+Variable Name: productPrice
+
+Result: Creates runtime variable {{productPrice}}</pre> </div> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Get Element Attribute</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Extract attribute values and store them:</p> <div class="bg-white/5 border border-white/10 rounded-lg p-6 mb-6" data-astro-cid-mr3wxiwq> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>Action: Get Element Attribute
+Selector: a.download-link
+Attribute: href
+Variable Name: downloadUrl
+
+Result: Creates runtime variable {{downloadUrl}}</pre> </div> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Using Extracted Data</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Once extracted, use the variable in subsequent actions:
+</p> <div class="bg-white/5 border border-white/10 rounded-lg p-6 mb-6" data-astro-cid-mr3wxiwq> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>1. Get Element Text → Store in {{userName}}
+2. Assert: equals → Value: {{userName}}
+3. Navigate → URL: {{baseUrl}}/users/{{userName}}</pre> </div> </section> <!-- Practical Examples --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Practical Examples
+</h2> <div class="space-y-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Example 1: Login Flow</h3> <div class="space-y-3" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Setup Variables:</strong></div> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>Global Variables:
+- username: admin@example.com
+- password: ••••••••• (secret)
+- loginUrl: https://app.example.com/login</pre> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Flow Actions:</strong></div> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>1. Navigate → {{loginUrl}}
+2. Input Text → #email → {{username}}
+3. Input Text → #password → {{password}}
+4. Click → button[type="submit"]
+5. Wait → element_visible → .dashboard</pre> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Example 2: Data Scraping</h3> <div class="space-y-3" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Setup Variables:</strong></div> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>Workspace Variables:
+- targetUrl: https://example.com/products</pre> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Flow Actions:</strong></div> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>1. Navigate → {{targetUrl}}
+2. Get Element Text → .product-title → productName
+3. Get Element Text → .product-price → productPrice
+4. Get Element Attribute → .product-image → src → imageUrl
+5. Assert → contains → Value: Product found</pre> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Result:</strong></div> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>Runtime variables created:
+- {{productName}} = "Premium Widget"
+- {{productPrice}} = "$99.99"
+- {{imageUrl}} = "https://example.com/images/widget.jpg"</pre> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-4" data-astro-cid-mr3wxiwq>
+Example 3: Environment-Specific Testing
+</h3> <div class="space-y-3" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Workspace "Development":</strong></div> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>baseUrl: https://dev.example.com
+apiKey: dev_key_123</pre> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Workspace "Production":</strong></div> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>baseUrl: https://example.com
+apiKey: prod_key_456</pre> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Same Flow Works in Both:</strong></div> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>1. Navigate → {{baseUrl}}/api/test
+2. Set Cookie → api_key → {{apiKey}}
+3. Click → #run-test</pre> </div> </div> </div> </section> <!-- Best Practices --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Best Practices
+</h2> <div class="space-y-4" data-astro-cid-mr3wxiwq> <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold text-green-400 mb-3" data-astro-cid-mr3wxiwq>Do's</h3> <ul class="space-y-2 text-gray-300" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Use descriptive variable names (camelCase recommended)</li> <li data-astro-cid-mr3wxiwq>
+Choose the narrowest scope possible (flow &gt; workspace &gt;
+                                global)
+</li> <li data-astro-cid-mr3wxiwq>Mark sensitive data as secret</li> <li data-astro-cid-mr3wxiwq>Use global variables for truly universal values</li> <li data-astro-cid-mr3wxiwq>Document complex variable usage in flow descriptions</li> </ul> </div> <div class="bg-red-500/10 border border-red-500/20 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold text-red-400 mb-3" data-astro-cid-mr3wxiwq>Don'ts</h3> <ul class="space-y-2 text-gray-300" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Don't use spaces in variable names</li> <li data-astro-cid-mr3wxiwq>
+Don't store sensitive data in flow or workspace variables if shared
+</li> <li data-astro-cid-mr3wxiwq>
+Don't create duplicate variable names across scopes (confusing)
+</li> <li data-astro-cid-mr3wxiwq>
+Don't hardcode values that might change - use variables instead
+</li> <li data-astro-cid-mr3wxiwq>Don't forget to clean up unused variables</li> </ul> </div> <div class="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold text-blue-400 mb-3" data-astro-cid-mr3wxiwq>
+Naming Conventions
+</h3> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>Good:
+- baseUrl, apiKey, userName, productPrice
+- isLoggedIn, hasPermission, shouldRetry
+
+Avoid:
+- url, key, name (too generic)
+- user name (spaces)
+- x, temp, foo (unclear meaning)</pre> </div> </div> </section> </div> </div> <div id="examples" class="scroll-mt-32 mb-28" data-astro-cid-mr3wxiwq> <div class="mb-10 border-b border-white/5 pb-6" data-astro-cid-mr3wxiwq> <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-emerald-400 to-blue-500" data-astro-cid-mr3wxiwq>
+Examples
+</h2> </div> <div class="prose prose-invert prose-lg max-w-none prose-headings:text-white prose-a:text-green-400 hover:prose-a:text-green-300 gap-y-6 flex flex-col" data-astro-cid-mr3wxiwq> <div class="space-y-12" data-astro-cid-mr3wxiwq> <!-- Login Automation --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Example 1: Login Automation
+</h2> <p class="text-gray-300 mb-6" data-astro-cid-mr3wxiwq>
+Automate logging into a web application with credential validation.
+</p> <div class="space-y-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Setup</h3> <div class="space-y-3" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Create Global Variables:</strong></div> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>username: your.email@example.com
+password: your_password (mark as secret)
+appUrl: https://app.example.com</pre> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Flow Actions</h3> <div class="space-y-3" data-astro-cid-mr3wxiwq> <ol class="space-y-3 text-gray-300" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>1. Navigate to Login Page</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Navigate
+URL: {{appUrl}}/login</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>2. Fill Username</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Input Text
+Selector: #email
+Text: {{username}}</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>3. Fill Password</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Input Text
+Selector: #password
+Text: {{password}}</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>4. Click Login Button</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Click
+Selector: button[type="submit"]</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>5. Wait for Dashboard</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Wait
+Mode: element_visible
+Selector: .dashboard-header</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>6. Verify Success</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Assert
+Operation: url_contains
+Value: /dashboard</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>7. Take Screenshot</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Screenshot
+Type: Full Page</pre> </li> </ol> </div> </div> </div> </section> <!-- Form Testing --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Example 2: Contact Form Testing
+</h2> <p class="text-gray-300 mb-6" data-astro-cid-mr3wxiwq>
+Test a contact form with multiple field types and validation.
+</p> <div class="space-y-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Flow Actions</h3> <ol class="space-y-3 text-gray-300" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>1. Navigate to Form</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Navigate
+URL: https://example.com/contact</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>2. Fill Name Field</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Input Text
+Selector: input[name="name"]
+Text: John Doe</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>3. Fill Email Field</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Input Text
+Selector: input[name="email"]
+Text: john@example.com</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>4. Select Subject Dropdown</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Select Dropdown
+Selector: select[name="subject"]
+Value: Technical Support</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>5. Fill Message Textarea</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Input Text
+Selector: textarea[name="message"]
+Text: This is a test message from Record Flow automation.</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>6. Check Agreement Checkbox</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Checkbox
+Selector: input[name="agree"]
+Operation: check</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>7. Submit Form</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Click
+Selector: button[type="submit"]</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>8. Wait for Success Message</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Wait
+Mode: element_visible
+Selector: .success-message</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>9. Verify Success Text</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Assert
+Operation: contains
+Selector: .success-message
+Value: Thank you for your message</pre> </li> </ol> </div> </div> </section> <!-- Web Scraping --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Example 3: Product Data Scraping
+</h2> <p class="text-gray-300 mb-6" data-astro-cid-mr3wxiwq>
+Extract product information from an e-commerce page.
+</p> <div class="space-y-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Flow Actions</h3> <ol class="space-y-3 text-gray-300" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>1. Navigate to Product Page</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Navigate
+URL: https://shop.example.com/products/laptop</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>2. Wait for Product to Load</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Wait
+Mode: element_visible
+Selector: .product-title</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>3. Extract Product Title</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Get Element Text
+Selector: .product-title
+Variable Name: productTitle</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>4. Extract Product Price</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Get Element Text
+Selector: .product-price
+Variable Name: productPrice</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>5. Extract Product Description</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Get Element Text
+Selector: .product-description
+Variable Name: productDescription</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>6. Extract Image URL</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Get Element Attribute
+Selector: .product-image img
+Attribute: src
+Variable Name: imageUrl</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>7. Extract Stock Status</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Get Element Text
+Selector: .stock-status
+Variable Name: stockStatus</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>8. Verify Data Extracted</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Assert
+Operation: visible
+Selector: .product-title</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>9. Take Screenshot of Product</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Screenshot
+Type: Full Page</pre> </li> </ol> </div> <div class="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold text-blue-400 mb-3" data-astro-cid-mr3wxiwq>
+Result Variables
+</h3> <p class="text-gray-300 mb-3" data-astro-cid-mr3wxiwq>
+After execution, these runtime variables will contain:
+</p> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>{{productTitle}} = "15-inch Laptop Pro"
+{{productPrice}} = "$1,299.99"
+{{productDescription}} = "High-performance laptop..."
+{{imageUrl}} = "https://shop.example.com/images/laptop.jpg"
+{{stockStatus}} = "In Stock"</pre> </div> </div> </section> <!-- E-commerce Checkout --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Example 4: E-commerce Checkout Flow
+</h2> <p class="text-gray-300 mb-6" data-astro-cid-mr3wxiwq>
+Automate adding products to cart and completing checkout process.
+</p> <div class="space-y-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Setup Variables</h3> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>storeUrl: https://shop.example.com
+testCardNumber: 4242424242424242
+testCVV: 123</pre> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Flow Actions</h3> <ol class="space-y-3 text-gray-300" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>1. Go to Product Page</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Navigate
+URL: {{storeUrl}}/products/widget</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>2. Click Add to Cart</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Click
+Selector: button.add-to-cart</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>3. Wait for Cart Update</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Wait
+Mode: timeout
+Value: 2000</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>4. Go to Cart</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Click
+Selector: a.cart-link</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>5. Verify Product in Cart</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Assert
+Operation: visible
+Selector: .cart-item</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>6. Proceed to Checkout</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Click
+Selector: button.checkout</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>7. Fill Shipping Information</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Multiple Input Text actions for:
+- Name, Email, Address, City, Zip Code</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>8. Continue to Payment</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Click
+Selector: button.continue-to-payment</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>9. Fill Card Details (Test Mode)</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Input Text
+Selector: input[name="cardNumber"]
+Text: {{testCardNumber}}</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>10. Take Screenshot Before Submit</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Screenshot
+Type: Full Page</pre> </li> </ol> </div> <div class="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold text-yellow-400 mb-2" data-astro-cid-mr3wxiwq>
+Important Note
+</h3> <p class="text-gray-300" data-astro-cid-mr3wxiwq>
+This example uses test credit card numbers. Always use test/sandbox
+                                environments for checkout automation. Never use real payment
+                                information in automated tests.
+</p> </div> </div> </section> <!-- Multi-Tab Workflow --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Example 5: Multi-Tab Data Comparison
+</h2> <p class="text-gray-300 mb-6" data-astro-cid-mr3wxiwq>Compare data across multiple tabs.</p> <div class="space-y-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Flow Actions</h3> <ol class="space-y-3 text-gray-300" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>1. Open First Page</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Navigate
+URL: https://site1.example.com/data</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>2. Extract Data from First Page</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Get Element Text
+Selector: .data-value
+Variable Name: site1Value</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>3. Open New Tab</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Open New Tab
+URL: https://site2.example.com/data</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>4. Switch to New Tab</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Switch to Tab
+Tab Index: 1</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>5. Extract Data from Second Page</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Get Element Text
+Selector: .data-value
+Variable Name: site2Value</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>6. Compare Values</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Assert
+Operation: equals
+Value: {{site1Value}} should equal {{site2Value}}</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>7. Switch Back to First Tab</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Switch to Tab
+Tab Index: 0</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>8. Close Second Tab</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Switch to Tab (1)
+Action: Close Tab</pre> </li> </ol> </div> </div> </section> <!-- iFrame Interaction --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Example 6: Working with iFrames
+</h2> <p class="text-gray-300 mb-6" data-astro-cid-mr3wxiwq>Interact with content inside iframes.</p> <div class="space-y-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Flow Actions</h3> <ol class="space-y-3 text-gray-300" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>1. Navigate to Page with iframe</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Navigate
+URL: https://example.com/page-with-iframe</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>2. Switch to iframe Context</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Switch to Frame
+Selector: iframe#payment-frame</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>3. Interact with iframe Content</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Input Text
+Selector: #card-number
+Text: 4242424242424242</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>4. Click Button Inside iframe</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Click
+Selector: button.submit-payment</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>5. Switch Back to Main Frame</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Switch to Main Frame</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>6. Verify Success on Main Page</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Assert
+Operation: visible
+Selector: .success-message</pre> </li> </ol> </div> </div> </section> <!-- Responsive Testing --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Example 7: Responsive Design Testing
+</h2> <p class="text-gray-300 mb-6" data-astro-cid-mr3wxiwq>
+Test how a website looks on different screen sizes.
+</p> <div class="space-y-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-mr3wxiwq>Flow Actions</h3> <ol class="space-y-3 text-gray-300" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>1. Navigate to Website</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Navigate
+URL: https://example.com</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>2. Test Desktop View</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Set Viewport
+Width: 1920
+Height: 1080</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>3. Screenshot Desktop</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Screenshot
+Type: Full Page</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>4. Test Tablet View</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Set Viewport
+Width: 768
+Height: 1024</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>5. Screenshot Tablet</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Screenshot
+Type: Full Page</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>6. Test Mobile View</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Set Viewport
+Width: 375
+Height: 667</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>7. Screenshot Mobile</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Screenshot
+Type: Full Page</pre> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>8. Verify Mobile Menu Visible</strong> <pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Assert
+Operation: visible
+Selector: .mobile-menu-button</pre> </li> </ol> </div> </div> </section> <!-- Tips --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Tips for Creating Effective Flows
+</h2> <div class="space-y-4" data-astro-cid-mr3wxiwq> <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold text-green-400 mb-3" data-astro-cid-mr3wxiwq>
+Best Practices
+</h3> <ul class="space-y-2 text-gray-300" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Add Wait Actions:</strong> Use waits between actions to ensure
+                                  page elements are ready
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Use Assertions:</strong> Verify expected outcomes at key steps
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Take Screenshots:</strong> Capture evidence at important points
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Use Variables:</strong> Make flows reusable across environments
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Test Incrementally:</strong> Build and test one action at a
+                                  time
+</li> </ul> </div> <div class="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold text-blue-400 mb-3" data-astro-cid-mr3wxiwq>
+Common Patterns
+</h3> <ul class="space-y-2 text-gray-300" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Login → Action → Logout:</strong> Standard authenticated flow
+                                  pattern
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Navigate → Wait → Extract → Verify:</strong> Data scraping pattern
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Fill Form → Submit → Verify Success:</strong> Form testing pattern
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Multiple viewports → Screenshot each:</strong> Responsive testing
+                                  pattern
+</li> </ul> </div> </div> </section> </div> </div> <div id="import-export" class="scroll-mt-32 mb-28" data-astro-cid-mr3wxiwq> <div class="mb-10 border-b border-white/5 pb-6" data-astro-cid-mr3wxiwq> <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-emerald-400 to-blue-500" data-astro-cid-mr3wxiwq>
+Import & Export
+</h2> </div> <div class="prose prose-invert prose-lg max-w-none prose-headings:text-white prose-a:text-green-400 hover:prose-a:text-green-300 gap-y-6 flex flex-col" data-astro-cid-mr3wxiwq> <div class="prose prose-invert max-w-none" data-astro-cid-mr3wxiwq> <!-- Overview --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-semibold mb-4 text-white border-b border-white/10 pb-2" data-astro-cid-mr3wxiwq>
+Overview
+</h2> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Record Flow allows you to export your flows and workspaces as JSON
+                              files. These files can be:
+</p> <ul class="ml-6 text-gray-300 space-y-2 mb-4" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Shared with team members or the community</li> <li data-astro-cid-mr3wxiwq>Used as backups for your automation workflows</li> <li data-astro-cid-mr3wxiwq>Transferred between different installations</li> <li data-astro-cid-mr3wxiwq>Version controlled using Git or other systems</li> <li data-astro-cid-mr3wxiwq>Modified manually for advanced use cases</li> </ul> <div class="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4 mb-4" data-astro-cid-mr3wxiwq> <p class="text-blue-200 m-0" data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>💡 Tip:</strong> Exporting flows is a great way to share common
+                                automation patterns with your team or create a library of reusable workflows.
+</p> </div> </section> <!-- Exporting Flows --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-semibold mb-4 text-white border-b border-white/10 pb-2" data-astro-cid-mr3wxiwq>
+Exporting Flows
+</h2> <h3 class="text-2xl font-semibold mb-3 text-white" data-astro-cid-mr3wxiwq>
+Export a Single Flow
+</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>To export an individual flow:</p> <ol class="ml-6 text-gray-300 space-y-2 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Open the workspace containing the flow you want to export</li> <li data-astro-cid-mr3wxiwq>Right-click on the flow in the flows list</li> <li data-astro-cid-mr3wxiwq>Select <strong data-astro-cid-mr3wxiwq>"Export Flow"</strong> from the context menu</li> <li data-astro-cid-mr3wxiwq>Choose a location and filename for the JSON file</li> <li data-astro-cid-mr3wxiwq>Click <strong data-astro-cid-mr3wxiwq>Save</strong></li> </ol> <h3 class="text-2xl font-semibold mb-3 text-white" data-astro-cid-mr3wxiwq>
+Export Multiple Flows
+</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>To export multiple flows at once:</p> <ol class="ml-6 text-gray-300 space-y-2 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Open the workspace</li> <li data-astro-cid-mr3wxiwq>
+Select multiple flows by holding <code data-astro-cid-mr3wxiwq>Ctrl</code> (Windows/Linux) or
+<code data-astro-cid-mr3wxiwq>Cmd</code> (Mac) and clicking each flow
+</li> <li data-astro-cid-mr3wxiwq>Right-click on one of the selected flows</li> <li data-astro-cid-mr3wxiwq>Select <strong data-astro-cid-mr3wxiwq>"Export Selected Flows"</strong></li> <li data-astro-cid-mr3wxiwq>Choose a location and base filename</li> <li data-astro-cid-mr3wxiwq>Each flow will be saved as a separate JSON file</li> </ol> <div class="bg-white/5 border border-white/10 rounded-lg p-4 mb-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>
+Exported Flow Structure
+</h4> <p class="text-gray-300 mb-2" data-astro-cid-mr3wxiwq>An exported flow JSON file contains:</p> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>{
+  &quot;name&quot;: &quot;Login Flow&quot;,
+  &quot;description&quot;: &quot;Automated login process&quot;,
+  &quot;browser&quot;: &quot;chrome&quot;,
+  &quot;variables&quot;: [
+    {
+      &quot;name&quot;: &quot;username&quot;,
+      &quot;value&quot;: &quot;user@example.com&quot;,
+      &quot;scope&quot;: &quot;flow&quot;
+    }
+  ],
+  &quot;actions&quot;: [
+    {
+      &quot;type&quot;: &quot;navigate&quot;,
+      &quot;url&quot;: &quot;https://example.com/login&quot;,
+      &quot;order&quot;: 1
+    },
+    {
+      &quot;type&quot;: &quot;input&quot;,
+      &quot;selector&quot;: &quot;#email&quot;,
+      &quot;text&quot;: &quot;{username}&quot;,
+      &quot;order&quot;: 2
+    }
+  ],
+  &quot;createdAt&quot;: &quot;2025-12-05T10:30:00.000Z&quot;,
+  &quot;updatedAt&quot;: &quot;2025-12-05T10:35:00.000Z&quot;
+}</pre> </div> </section> <!-- Importing Flows --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-semibold mb-4 text-white border-b border-white/10 pb-2" data-astro-cid-mr3wxiwq>
+Importing Flows
+</h2> <h3 class="text-2xl font-semibold mb-3 text-white" data-astro-cid-mr3wxiwq>Import a Flow</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>To import a flow into a workspace:</p> <ol class="ml-6 text-gray-300 space-y-2 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Open the workspace where you want to import the flow</li> <li data-astro-cid-mr3wxiwq>
+Click the <strong data-astro-cid-mr3wxiwq>"Import Flow"</strong> button or use the menu
+</li> <li data-astro-cid-mr3wxiwq>Select the JSON file containing the flow</li> <li data-astro-cid-mr3wxiwq>Review the import preview showing flow details</li> <li data-astro-cid-mr3wxiwq>
+Click <strong data-astro-cid-mr3wxiwq>"Import"</strong> to add the flow to your workspace
+</li> </ol> <h3 class="text-2xl font-semibold mb-3 text-white" data-astro-cid-mr3wxiwq>
+Import Multiple Flows
+</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>To import multiple flows at once:</p> <ol class="ml-6 text-gray-300 space-y-2 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Open the target workspace</li> <li data-astro-cid-mr3wxiwq>Click <strong data-astro-cid-mr3wxiwq>"Import Flows"</strong></li> <li data-astro-cid-mr3wxiwq>
+Select multiple JSON files (using <code data-astro-cid-mr3wxiwq>Ctrl</code> or <code data-astro-cid-mr3wxiwq>Cmd</code> + click)
+</li> <li data-astro-cid-mr3wxiwq>Review the list of flows to be imported</li> <li data-astro-cid-mr3wxiwq>Click <strong data-astro-cid-mr3wxiwq>"Import All"</strong></li> </ol> <div class="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4 mb-4" data-astro-cid-mr3wxiwq> <p class="text-yellow-200 m-0" data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>⚠️ Note:</strong> If a flow with the same name already exists
+                                in the workspace, Record Flow will append a number to the imported flow's
+                                name (e.g., "Login Flow (1)").
+</p> </div> </section> <!-- Exporting Workspaces --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-semibold mb-4 text-white border-b border-white/10 pb-2" data-astro-cid-mr3wxiwq>
+Exporting Workspaces
+</h2> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Export an entire workspace including all its flows and workspace-level
+                              variables:
+</p> <ol class="ml-6 text-gray-300 space-y-2 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Right-click on the workspace in the workspaces list</li> <li data-astro-cid-mr3wxiwq>Select <strong data-astro-cid-mr3wxiwq>"Export Workspace"</strong></li> <li data-astro-cid-mr3wxiwq>Choose a location and filename</li> <li data-astro-cid-mr3wxiwq>Click <strong data-astro-cid-mr3wxiwq>Save</strong></li> </ol> <div class="bg-white/5 border border-white/10 rounded-lg p-4 mb-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>
+Exported Workspace Structure
+</h4> <p class="text-gray-300 mb-2" data-astro-cid-mr3wxiwq>
+A workspace export includes all flows and metadata:
+</p> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>{
+  &quot;name&quot;: &quot;E-Commerce Testing&quot;,
+  &quot;description&quot;: &quot;Automated tests for online store&quot;,
+  &quot;variables&quot;: [
+    {
+      &quot;name&quot;: &quot;baseUrl&quot;,
+      &quot;value&quot;: &quot;https://shop.example.com&quot;,
+      &quot;scope&quot;: &quot;workspace&quot;
+    }
+  ],
+  &quot;flows&quot;: [
+    {
+      &quot;name&quot;: &quot;Login Flow&quot;,
+      &quot;actions&quot;: [...],
+      &quot;variables&quot;: [...]
+    },
+    {
+      &quot;name&quot;: &quot;Add to Cart Flow&quot;,
+      &quot;actions&quot;: [...],
+      &quot;variables&quot;: [...]
+    }
+  ],
+  &quot;createdAt&quot;: &quot;2025-12-01T10:00:00.000Z&quot;,
+  &quot;updatedAt&quot;: &quot;2025-12-05T15:30:00.000Z&quot;
+}</pre> </div> </section> <!-- Importing Workspaces --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-semibold mb-4 text-white border-b border-white/10 pb-2" data-astro-cid-mr3wxiwq>
+Importing Workspaces
+</h2> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Import a complete workspace with all its flows:
+</p> <ol class="ml-6 text-gray-300 space-y-2 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>
+From the main screen, click <strong data-astro-cid-mr3wxiwq>"Import Workspace"</strong> </li> <li data-astro-cid-mr3wxiwq>Select the workspace JSON file</li> <li data-astro-cid-mr3wxiwq>Review the workspace name and number of flows</li> <li data-astro-cid-mr3wxiwq>Click <strong data-astro-cid-mr3wxiwq>"Import"</strong></li> <li data-astro-cid-mr3wxiwq>The workspace will be added to your workspaces list</li> </ol> <div class="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4 mb-4" data-astro-cid-mr3wxiwq> <p class="text-yellow-200 m-0" data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>⚠️ Note:</strong> If a workspace with the same name already exists,
+                                the imported workspace will be renamed with a number suffix.
+</p> </div> </section> <!-- Handling Import Conflicts --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-semibold mb-4 text-white border-b border-white/10 pb-2" data-astro-cid-mr3wxiwq>
+Handling Import Conflicts
+</h2> <h3 class="text-2xl font-semibold mb-3 text-white" data-astro-cid-mr3wxiwq>Name Conflicts</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+When importing flows or workspaces with duplicate names:
+</p> <ul class="ml-6 text-gray-300 space-y-2 mb-4" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Automatic Renaming:</strong> Record Flow automatically appends
+                                "(1)", "(2)", etc. to duplicate names
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Manual Rename:</strong> You can rename the imported item after
+                                import
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>No Overwrite:</strong> Existing flows are never overwritten automatically
+</li> </ul> <h3 class="text-2xl font-semibold mb-3 text-white" data-astro-cid-mr3wxiwq>
+Variable Conflicts
+</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>When importing flows with variables:</p> <ul class="ml-6 text-gray-300 space-y-2 mb-4" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Flow Variables:</strong> Imported as-is with the flow</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Workspace Variables:</strong> Merged with existing workspace variables
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Global Variables:</strong> Not affected by imports (set separately)
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Duplicate Names:</strong> If a workspace variable with the same
+                                name exists, the imported value is ignored
+</li> </ul> <h3 class="text-2xl font-semibold mb-3 text-white" data-astro-cid-mr3wxiwq>
+Missing Dependencies
+</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+If an imported flow references variables that don't exist:
+</p> <ul class="ml-6 text-gray-300 space-y-2 mb-4" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>The flow will still be imported successfully</li> <li data-astro-cid-mr3wxiwq>You'll need to create the missing variables manually</li> <li data-astro-cid-mr3wxiwq>Check the variable references in the imported flow's actions</li> </ul> </section> <!-- Best Practices --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-semibold mb-4 text-white border-b border-white/10 pb-2" data-astro-cid-mr3wxiwq>
+Best Practices
+</h2> <div class="space-y-6" data-astro-cid-mr3wxiwq> <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>✓ Do's</h4> <ul class="ml-6 text-gray-300 space-y-2" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Add Descriptions:</strong> Include clear descriptions in your
+                                    flows before exporting
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Document Variables:</strong> Comment on what each variable
+                                    is used for
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Test Before Sharing:</strong> Verify flows work correctly
+                                    before exporting
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Use Meaningful Names:</strong> Name flows clearly for easy
+                                    identification
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Version Control:</strong> Use Git or similar tools to track
+                                    changes to exported flows
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Regular Backups:</strong> Export important workspaces regularly
+                                    as backups
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Organize Files:</strong> Keep exported flows in organized
+                                    folders by project or purpose
+</li> </ul> </div> <div class="bg-red-500/10 border border-red-500/20 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>✗ Don'ts</h4> <ul class="ml-6 text-gray-300 space-y-2" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Don't Export Secrets:</strong> Avoid exporting flows with
+                                    sensitive passwords or API keys in variables
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Don't Edit JSON Manually:</strong> Unless you understand the
+                                    structure, manual edits can break imports
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Don't Share Personal Data:</strong> Remove any personal or
+                                    confidential data before sharing flows
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Don't Rely Solely on Exports:</strong> Keep original workspaces;
+                                    exports are supplements, not replacements
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Don't Import Untrusted Files:</strong> Only import flows from
+                                    trusted sources
+</li> </ul> </div> </div> </section> <!-- Sharing Workflows --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-semibold mb-4 text-white border-b border-white/10 pb-2" data-astro-cid-mr3wxiwq>
+Sharing Workflows with Teams
+</h2> <h3 class="text-2xl font-semibold mb-3 text-white" data-astro-cid-mr3wxiwq>
+Preparing Flows for Sharing
+</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Before sharing a flow with your team:</p> <ol class="ml-6 text-gray-300 space-y-2 mb-6" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Review Variables:</strong> Ensure no sensitive data is hardcoded
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Add Documentation:</strong> Include clear descriptions and comments
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Test Thoroughly:</strong> Verify the flow works in a clean environment
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>List Prerequisites:</strong> Document any required setup (URLs,
+                                credentials format)
+</li> <li data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Export:</strong> Create the JSON export file</li> </ol> <h3 class="text-2xl font-semibold mb-3 text-white" data-astro-cid-mr3wxiwq>
+Distribution Methods
+</h3> <div class="space-y-4 mb-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>Email</h4> <p class="text-gray-300" data-astro-cid-mr3wxiwq>
+Attach the JSON file to an email with instructions for import and
+                                  any required setup steps.
+</p> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>Shared Drive</h4> <p class="text-gray-300" data-astro-cid-mr3wxiwq>
+Store exported flows in a team shared drive (Google Drive,
+                                  Dropbox, OneDrive) for easy access.
+</p> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>
+Version Control
+</h4> <p class="text-gray-300" data-astro-cid-mr3wxiwq>
+Commit exported flows to a Git repository for version tracking and
+                                  team collaboration.
+</p> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto mt-2" data-astro-cid-mr3wxiwq># Example Git workflow
+git clone https://github.com/yourteam/flows.git
+cd flows
+# Add exported flow
+cp ~/Downloads/login-flow.json ./e-commerce/
+git add .
+git commit -m &quot;Add login flow for e-commerce site&quot;
+git push</pre> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>
+Internal Wiki/Docs
+</h4> <p class="text-gray-300" data-astro-cid-mr3wxiwq>
+Create a library of flows in your team's documentation system with
+                                  download links and usage guides.
+</p> </div> </div> </section> <!-- Advanced: Manual JSON Editing --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-semibold mb-4 text-white border-b border-white/10 pb-2" data-astro-cid-mr3wxiwq>
+Advanced: Manual JSON Editing
+</h2> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+For advanced users, you can manually edit exported JSON files to:
+</p> <ul class="ml-6 text-gray-300 space-y-2 mb-4" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Batch update selectors across multiple actions</li> <li data-astro-cid-mr3wxiwq>Find and replace URLs or text patterns</li> <li data-astro-cid-mr3wxiwq>Programmatically generate flows</li> <li data-astro-cid-mr3wxiwq>Merge multiple flows</li> </ul> <div class="bg-red-500/10 border border-red-500/20 rounded-lg p-4 mb-4" data-astro-cid-mr3wxiwq> <p class="text-red-200 m-0" data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>⚠️ Warning:</strong> Manual editing requires understanding the
+                                JSON structure. Invalid JSON will fail to import. Always keep a backup
+                                before editing.
+</p> </div> <h3 class="text-2xl font-semibold mb-3 text-white" data-astro-cid-mr3wxiwq>
+Example: Bulk Selector Update
+</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+If a website changes its selectors, you can use find/replace in a text
+                              editor:
+</p> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto mb-4" data-astro-cid-mr3wxiwq># Before: Old class name
+&quot;selector&quot;: &quot;.old-button&quot;
+
+# After: New class name
+&quot;selector&quot;: &quot;.new-button&quot;
+
+# Use find/replace in your editor to update all instances</pre> <h3 class="text-2xl font-semibold mb-3 text-white" data-astro-cid-mr3wxiwq>Validation</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+After manual edits, validate your JSON:
+</p> <ul class="ml-6 text-gray-300 space-y-2 mb-4" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Use an online JSON validator (jsonlint.com)</li> <li data-astro-cid-mr3wxiwq>Test import in Record Flow with a copy first</li> <li data-astro-cid-mr3wxiwq>Run the imported flow to verify functionality</li> </ul> </section> <!-- Troubleshooting --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-semibold mb-4 text-white border-b border-white/10 pb-2" data-astro-cid-mr3wxiwq>
+Troubleshooting
+</h2> <div class="space-y-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>
+Import Fails: "Invalid JSON Format"
+</h4> <p class="text-gray-300 mb-2" data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Cause:</strong> The JSON file is corrupted or manually edited
+                                  incorrectly
+</p> <p class="text-gray-300 mb-2" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Solution:</strong></p> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Validate the JSON using an online validator</li> <li data-astro-cid-mr3wxiwq>Check for missing commas, brackets, or quotes</li> <li data-astro-cid-mr3wxiwq>Re-export from the original source if available</li> </ul> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>
+Import Succeeds but Flow Doesn't Work
+</h4> <p class="text-gray-300 mb-2" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Possible Causes:</strong></p> <ul class="ml-6 text-gray-300 space-y-1 mb-2" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Missing variables that weren't included in the export</li> <li data-astro-cid-mr3wxiwq>Different environment (URLs, credentials)</li> <li data-astro-cid-mr3wxiwq>Website changes since flow was created</li> </ul> <p class="text-gray-300 mb-2" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Solution:</strong></p> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Check all variable references and create missing ones</li> <li data-astro-cid-mr3wxiwq>Update URLs and selectors for your environment</li> <li data-astro-cid-mr3wxiwq>Run the flow step-by-step to identify issues</li> </ul> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>
+Export Button Doesn't Work
+</h4> <p class="text-gray-300 mb-2" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Solution:</strong></p> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>
+Ensure you have write permissions to the destination folder
+</li> <li data-astro-cid-mr3wxiwq>Try exporting to a different location (like Desktop)</li> <li data-astro-cid-mr3wxiwq>Check if there's enough disk space</li> <li data-astro-cid-mr3wxiwq>Restart Record Flow and try again</li> </ul> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-4" data-astro-cid-mr3wxiwq> <h4 class="text-lg font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>
+Variables Missing After Import
+</h4> <p class="text-gray-300 mb-2" data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>Cause:</strong> Variable scope differences
+</p> <p class="text-gray-300 mb-2" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Solution:</strong></p> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Flow-level variables are imported with the flow</li> <li data-astro-cid-mr3wxiwq>
+Workspace-level variables must be created manually or imported
+                                    with the workspace
+</li> <li data-astro-cid-mr3wxiwq>
+Global variables are never exported/imported (set them
+                                    separately)
+</li> </ul> </div> </div> </section> <!-- Use Cases --> <section class="mb-12" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-semibold mb-4 text-white border-b border-white/10 pb-2" data-astro-cid-mr3wxiwq>
+Common Use Cases
+</h2> <div class="grid gap-6 mb-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>
+Team Collaboration
+</h3> <p class="text-gray-300" data-astro-cid-mr3wxiwq>
+QA engineers create test flows and share them with the team
+                                  through a shared repository. Each team member imports the flows
+                                  they need.
+</p> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>
+Environment Migration
+</h3> <p class="text-gray-300" data-astro-cid-mr3wxiwq>
+Export flows from your staging environment, then import and modify
+                                  variables for production use.
+</p> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>
+Backup Strategy
+</h3> <p class="text-gray-300" data-astro-cid-mr3wxiwq>
+Set up a weekly routine to export all workspaces to a backup
+                                  folder synced to cloud storage.
+</p> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>
+Template Library
+</h3> <p class="text-gray-300" data-astro-cid-mr3wxiwq>
+Create and maintain a collection of common flow templates (login,
+                                  form submission, data extraction) that can be imported and
+                                  customized for new projects.
+</p> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>
+Disaster Recovery
+</h3> <p class="text-gray-300" data-astro-cid-mr3wxiwq>
+Regular workspace exports ensure you can quickly restore your
+                                  automation setup if you need to reinstall Record Flow or switch
+                                  computers.
+</p> </div> </div> </section> <!-- Related Topics --> <section class="mb-8" data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-semibold mb-4 text-white border-b border-white/10 pb-2" data-astro-cid-mr3wxiwq>
+Related Topics
+</h2> <div class="grid md:grid-cols-2 gap-4" data-astro-cid-mr3wxiwq> <a href="#variables" class="block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg p-4 transition-colors" data-astro-cid-mr3wxiwq> <h3 class="text-lg font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>
+Variables System
+</h3> <p class="text-gray-400 text-sm" data-astro-cid-mr3wxiwq>
+Learn about variable scopes and how they're handled in exports
+</p> </a> <a href="#core-concepts" class="block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg p-4 transition-colors" data-astro-cid-mr3wxiwq> <h3 class="text-lg font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>Core Concepts</h3> <p class="text-gray-400 text-sm" data-astro-cid-mr3wxiwq>
+Understand workspaces and flows structure
+</p> </a> <a href="#examples" class="block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg p-4 transition-colors" data-astro-cid-mr3wxiwq> <h3 class="text-lg font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>
+Practical Examples
+</h3> <p class="text-gray-400 text-sm" data-astro-cid-mr3wxiwq>
+See complete workflows you can export and adapt
+</p> </a> <a href="#troubleshooting" class="block bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg p-4 transition-colors" data-astro-cid-mr3wxiwq> <h3 class="text-lg font-semibold mb-2 text-white" data-astro-cid-mr3wxiwq>
+Troubleshooting
+</h3> <p class="text-gray-400 text-sm" data-astro-cid-mr3wxiwq>Resolve import/export issues</p> </a> </div> </section> </div> </div> </div> </div> </div> <div id="troubleshooting" class="scroll-mt-32 mb-28" data-astro-cid-mr3wxiwq> <div class="mb-10 border-b border-white/5 pb-6" data-astro-cid-mr3wxiwq> <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-emerald-400 to-blue-500" data-astro-cid-mr3wxiwq>
+Troubleshooting
+</h2> </div> <div class="prose prose-invert prose-lg max-w-none prose-headings:text-white prose-a:text-green-400 hover:prose-a:text-green-300 gap-y-6 flex flex-col" data-astro-cid-mr3wxiwq> <div class="space-y-12" data-astro-cid-mr3wxiwq> <!-- Installation Issues --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Installation Issues
+</h2> <div class="space-y-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>
+macOS: "App is damaged and can't be opened"
+</h3> <div class="mb-4" data-astro-cid-mr3wxiwq> <span class="inline-block bg-red-600/20 text-red-400 text-sm px-3 py-1 rounded-full border border-red-600/30" data-astro-cid-mr3wxiwq>
+Common on macOS
+</span> </div> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+This happens because the app is not signed with an Apple Developer
+                              certificate yet.
+</p> <div class="space-y-3" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Solution:</strong></div> <ol class="ml-6 text-gray-300 space-y-2" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>1. Move Record Flow to your Applications folder</li> <li data-astro-cid-mr3wxiwq>2. Open Terminal</li> <li data-astro-cid-mr3wxiwq>3. Run this command:</li> </ol> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>xattr -c /Applications/Record\ Flow.app</pre> <p class="text-gray-400 text-sm mt-2" data-astro-cid-mr3wxiwq>
+This removes the quarantine attribute from the app.
+</p> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>
+Linux: Browser Doesn't Launch
+</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Missing system dependencies for Playwright browsers.
+</p> <div class="space-y-3" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Solution:</strong></div> <p class="text-gray-300" data-astro-cid-mr3wxiwq>Install required dependencies:</p> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>sudo apt-get install -y \
+  libgbm1 \
+  libgtk-3-0 \
+  libnss3 \
+  libasound2 \
+  libxss1</pre> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>
+Windows: Application Won't Start
+</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Missing Visual C++ Redistributables or Windows Defender blocking.
+</p> <div class="space-y-3" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Solutions:</strong></div> <ol class="ml-6 text-gray-300 space-y-2" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>1. Install Microsoft Visual C++ Redistributable (latest)</li> <li data-astro-cid-mr3wxiwq>2. Add Record Flow to Windows Defender exclusions</li> <li data-astro-cid-mr3wxiwq>
+3. Run as Administrator (right-click → Run as administrator)
+</li> </ol> </div> </div> </div> </section> <!-- Selector Issues --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Selector Issues
+</h2> <div class="space-y-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Element Not Found</h3> <div class="mb-4" data-astro-cid-mr3wxiwq> <span class="inline-block bg-yellow-600/20 text-yellow-400 text-sm px-3 py-1 rounded-full border border-yellow-600/30" data-astro-cid-mr3wxiwq>
+Most Common Issue
+</span> </div> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+The selector doesn't match any element on the page.
+</p> <div class="space-y-3" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Causes:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Incorrect selector syntax</li> <li data-astro-cid-mr3wxiwq>Element hasn't loaded yet</li> <li data-astro-cid-mr3wxiwq>Element is in an iframe</li> <li data-astro-cid-mr3wxiwq>Dynamic IDs or classes changed</li> </ul> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Solutions:</strong></div> <ol class="ml-6 text-gray-300 space-y-2" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>
+1. <strong data-astro-cid-mr3wxiwq>Verify selector in DevTools:</strong> Open browser DevTools
+                                  (F12), use Console to test:
+<pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>document.querySelector('your-selector')</pre> </li> <li data-astro-cid-mr3wxiwq>
+2. <strong data-astro-cid-mr3wxiwq>Add a Wait action:</strong> Wait for element to appear before
+                                  interacting:
+<pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Wait
+Mode: element_visible
+Selector: your-selector</pre> </li> <li data-astro-cid-mr3wxiwq>
+3. <strong data-astro-cid-mr3wxiwq>Check if element is in iframe:</strong> Use Switch to Frame
+                                  action first
+</li> <li data-astro-cid-mr3wxiwq>
+4. <strong data-astro-cid-mr3wxiwq>Use more stable selectors:</strong> Prefer IDs or data attributes
+                                  over classes:
+<pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Good: #submit-btn or [data-testid="submit"]
+Avoid: .btn.btn-primary.active (too specific)</pre> </li> </ol> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>
+Multiple Elements Match Selector
+</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+The selector matches more than one element.
+</p> <div class="space-y-3" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Solutions:</strong></div> <ol class="ml-6 text-gray-300 space-y-2" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>
+1. Make selector more specific:
+<pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Instead of: button
+Use: #login-form button[type="submit"]</pre> </li> <li data-astro-cid-mr3wxiwq>
+2. Use nth-child or nth-of-type:
+<pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>.product-card:nth-child(2) button</pre> </li> <li data-astro-cid-mr3wxiwq>
+3. Use unique attributes:
+<pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>button[name="login"]
+button[aria-label="Submit form"]</pre> </li> </ol> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>
+Element is Visible but Not Clickable
+</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Element exists but click action fails.</p> <div class="space-y-3" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Causes:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Element is covered by another element (modal, overlay)</li> <li data-astro-cid-mr3wxiwq>Element is disabled</li> <li data-astro-cid-mr3wxiwq>Element hasn't finished animating</li> </ul> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Solutions:</strong></div> <ol class="ml-6 text-gray-300 space-y-2" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>
+1. Scroll element into view first:
+<pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Scroll to Element
+Selector: your-selector</pre> </li> <li data-astro-cid-mr3wxiwq>
+2. Add short wait for animations:
+<pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Wait
+Mode: timeout
+Value: 1000</pre> </li> <li data-astro-cid-mr3wxiwq>3. Close overlays or modals first</li> <li data-astro-cid-mr3wxiwq>
+4. Check if element is enabled:
+<pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Assert
+Operation: enabled
+Selector: your-selector</pre> </li> </ol> </div> </div> </div> </section> <!-- Timing Issues --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Timing Issues
+</h2> <div class="space-y-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Action Executes Too Quickly</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+The next action runs before the page is ready.
+</p> <div class="space-y-3" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Solutions:</strong></div> <ol class="ml-6 text-gray-300 space-y-2" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>
+1. Add Wait for element:
+<pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Wait
+Mode: element_visible
+Selector: element-that-appears-when-ready</pre> </li> <li data-astro-cid-mr3wxiwq>
+2. Wait for navigation:
+<pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Wait
+Mode: navigation</pre> </li> <li data-astro-cid-mr3wxiwq>
+3. Wait for network to be idle:
+<pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Wait
+Mode: networkidle</pre> </li> <li data-astro-cid-mr3wxiwq>
+4. Add timeout wait:
+<pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Action: Wait
+Mode: timeout
+Value: 2000</pre> </li> </ol> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Flow Times Out</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Flow fails with timeout errors.</p> <div class="space-y-3" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Causes:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Page takes too long to load</li> <li data-astro-cid-mr3wxiwq>Element never appears</li> <li data-astro-cid-mr3wxiwq>Network issues</li> </ul> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Solutions:</strong></div> <ol class="ml-6 text-gray-300 space-y-2" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>1. Increase timeout in Wait action</li> <li data-astro-cid-mr3wxiwq>2. Check network connectivity</li> <li data-astro-cid-mr3wxiwq>3. Verify the element actually exists on the page</li> <li data-astro-cid-mr3wxiwq>4. Use a faster wait mode (visible instead of attached)</li> </ol> </div> </div> </div> </section> <!-- Variable Issues --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Variable Issues
+</h2> <div class="space-y-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Variable Not Resolved</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Variable shows as literal text instead of value.
+</p> <div class="space-y-3" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Causes:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Variable doesn't exist in any scope</li> <li data-astro-cid-mr3wxiwq>Typo in variable name</li> <li data-astro-cid-mr3wxiwq>Wrong syntax</li> </ul> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Solutions:</strong></div> <ol class="ml-6 text-gray-300 space-y-2" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>1. Check variable exists in Variables panel</li> <li data-astro-cid-mr3wxiwq>
+2. Verify correct syntax:
+<pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>Correct: {{username}}
+Wrong: {username}, $username, %username%</pre> </li> <li data-astro-cid-mr3wxiwq>3. Check variable name matches exactly (case-sensitive)</li> <li data-astro-cid-mr3wxiwq>
+4. Ensure variable is in correct scope (global/workspace/flow)
+</li> </ol> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>
+Runtime Variable Not Available
+</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+Variable created by Get Element Text/Attribute is not usable.
+</p> <div class="space-y-3" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Solutions:</strong></div> <ol class="ml-6 text-gray-300 space-y-2" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>1. Ensure Get action executed successfully</li> <li data-astro-cid-mr3wxiwq>2. Use variable only AFTER it's created (later actions)</li> <li data-astro-cid-mr3wxiwq>3. Check variable name has no spaces or special characters</li> </ol> </div> </div> </div> </section> <!-- Browser Issues --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Browser Issues
+</h2> <div class="space-y-6" data-astro-cid-mr3wxiwq> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>Browser Doesn't Launch</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Selected browser fails to start.</p> <div class="space-y-3" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Solutions:</strong></div> <ol class="ml-6 text-gray-300 space-y-2" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>1. Try a different browser (Chrome or Edge)</li> <li data-astro-cid-mr3wxiwq>2. Restart Record Flow</li> <li data-astro-cid-mr3wxiwq>3. Check system has enough resources (RAM, disk space)</li> <li data-astro-cid-mr3wxiwq>
+4. On Linux: Install browser dependencies (see Installation
+                                  Issues)
+</li> </ol> </div> </div> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-2xl font-semibold mb-3" data-astro-cid-mr3wxiwq>
+Browser Crashes During Execution
+</h3> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>Browser closes unexpectedly mid-flow.</p> <div class="space-y-3" data-astro-cid-mr3wxiwq> <div data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Causes:</strong></div> <ul class="ml-6 text-gray-300 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Page causes browser crash (memory leak, infinite loop)</li> <li data-astro-cid-mr3wxiwq>System resources exhausted</li> <li data-astro-cid-mr3wxiwq>Browser extension conflict</li> </ul> <div class="mt-4" data-astro-cid-mr3wxiwq><strong data-astro-cid-mr3wxiwq>Solutions:</strong></div> <ol class="ml-6 text-gray-300 space-y-2" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>1. Try different browser</li> <li data-astro-cid-mr3wxiwq>2. Close other applications to free memory</li> <li data-astro-cid-mr3wxiwq>3. Test the problematic page manually in browser first</li> </ol> </div> </div> </div> </section> <!-- Debugging Tips --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Debugging Tips
+</h2> <div class="space-y-6" data-astro-cid-mr3wxiwq> <div class="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold text-blue-400 mb-3" data-astro-cid-mr3wxiwq>
+General Debugging Strategies
+</h3> <ul class="space-y-2 text-gray-300" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>1. Run Actions One at a Time:</strong> Build flow incrementally,
+                                testing each action
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>2. Add Screenshots:</strong> Take screenshots before and after
+                                problem actions
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>3. Use Browser DevTools:</strong> Inspect page, test selectors,
+                                check console errors
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>4. Check Action Status:</strong> Review which action failed and
+                                error message
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>5. Simplify Flow:</strong> Remove non-essential actions to isolate
+                                the problem
+</li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>6. Test Manually First:</strong> Perform the actions manually
+                                to verify they're possible
+</li> </ul> </div> <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold text-green-400 mb-3" data-astro-cid-mr3wxiwq>
+Using Browser DevTools
+</h3> <ol class="space-y-2 text-gray-300" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>1. Open DevTools: Right-click page → Inspect (or F12)</li> <li data-astro-cid-mr3wxiwq>
+2. Test selectors in Console:
+<pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>document.querySelector('#your-selector')</pre> </li> <li data-astro-cid-mr3wxiwq>
+3. Check element properties:
+<pre class="bg-gray-900 p-3 rounded text-sm mt-2" data-astro-cid-mr3wxiwq>const el = document.querySelector('#elem');
+console.log(el.textContent);
+console.log(el.getAttribute('href'));</pre> </li> <li data-astro-cid-mr3wxiwq>4. View Console for JavaScript errors</li> <li data-astro-cid-mr3wxiwq>5. Use Network tab to see if resources are loading</li> </ol> </div> <div class="bg-purple-500/10 border border-purple-500/20 rounded-lg p-6" data-astro-cid-mr3wxiwq> <h3 class="text-xl font-semibold text-purple-400 mb-3" data-astro-cid-mr3wxiwq>
+Common Debugging Actions to Add
+</h3> <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto" data-astro-cid-mr3wxiwq>1. Wait for page load:
+   Action: Wait → Mode: load
+
+2. Wait for element:
+   Action: Wait → Mode: element_visible → Selector
+
+3. Take screenshot:
+   Action: Screenshot → Full Page
+
+4. Verify element exists:
+   Action: Assert → Operation: visible → Selector
+
+5. Add timeout between actions:
+   Action: Wait → Mode: timeout → Value: 1000</pre> </div> </div> </section> <!-- Getting Help --> <section data-astro-cid-mr3wxiwq> <h2 class="text-3xl font-bold mb-6 pb-2 border-b border-white/10" data-astro-cid-mr3wxiwq>
+Getting Help
+</h2> <div class="bg-white/5 border border-white/10 rounded-lg p-6" data-astro-cid-mr3wxiwq> <p class="text-gray-300 mb-4" data-astro-cid-mr3wxiwq>
+If you're still experiencing issues after trying these solutions:
+</p> <ul class="space-y-3 text-gray-300" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>1. Check GitHub Issues:</strong> Search for similar problems at
+<a href="https://github.com/Record10/record-flow/issues" class="text-brand-primary-400 hover:underline" target="_blank" rel="noopener noreferrer" data-astro-cid-mr3wxiwq>github.com/Record10/record-flow/issues</a> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>2. Create New Issue:</strong> Provide:
+<ul class="ml-6 mt-2 space-y-1" data-astro-cid-mr3wxiwq> <li data-astro-cid-mr3wxiwq>Record Flow version</li> <li data-astro-cid-mr3wxiwq>Operating system</li> <li data-astro-cid-mr3wxiwq>Browser being used</li> <li data-astro-cid-mr3wxiwq>Steps to reproduce</li> <li data-astro-cid-mr3wxiwq>Error message or screenshot</li> <li data-astro-cid-mr3wxiwq>Flow export (if applicable)</li> </ul> </li> <li data-astro-cid-mr3wxiwq> <strong data-astro-cid-mr3wxiwq>3. Community Discussions:</strong> Ask questions at <a href="https://github.com/Record10/record-flow/discussions" class="text-brand-primary-400 hover:underline" target="_blank" rel="noopener noreferrer" data-astro-cid-mr3wxiwq>GitHub Discussions</a> </li> </ul> </div> </section> </div> </div> </div> </div> </div> <footer class="text-gray-300"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8"> <!-- Brand --> <div class="col-span-1 md:col-span-2"> <div class="flex items-center gap-3 mb-4"> <img src="/r10.svg" alt="R10 Logo" class="h-8 w-auto"> <span class="text-2xl font-bold text-white">Record10</span> </div> <p class="text-gray-400 max-w-md mb-4">
+Building powerful tools for professionals. Free software that empowers you to work smarter
+          and faster.
+</p> <div class="flex gap-4"> <a href="https://github.com/Record10/record-flow" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors"> <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"> <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path> </svg> </a> <a href="https://twitter.com/record10" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors"> <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"> <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path> </svg> </a> <a href="/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors"> <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"> <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path> </svg> </a> </div> </div> <!-- Products --> <div> <h3 class="text-white font-semibold mb-4">Products</h3> <ul class="space-y-2"> <li> <a href="/#record-flow" class="hover:text-white transition-colors">Record Flow</a> </li> <li> <a href="/#record-bill" class="hover:text-white transition-colors">Record Bill</a> </li> <li> <a href="/#record-tor" class="hover:text-white transition-colors">Record Tor</a> </li> <li> <a href="#download" class="hover:text-white transition-colors">Downloads</a> </li> <li> <a href="https://github.com/Record10/record-flow/releases" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Releases</a> </li> </ul> </div> <!-- Resources --> <div> <h3 class="text-white font-semibold mb-4">Resources</h3> <ul class="space-y-2"> <li> <a href="/" class="hover:text-white transition-colors">Documentation</a> </li> <li> <a href="https://github.com/Record10/record-flow" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a> </li> <li> <a href="/" class="hover:text-white transition-colors">Community</a> </li> <li> <a href="/" class="hover:text-white transition-colors">Support</a> </li> </ul> </div> </div> <!-- Bottom --> <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"> <p class="text-sm text-gray-400">
+© 2026 Record10. All rights reserved.
+</p> <div class="flex gap-6 text-sm"> <a href="/privacy-policy" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a> <a href="/" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a> <a href="/" class="text-gray-400 hover:text-white transition-colors">License</a> </div> </div> </div> </footer> </div> </main> <script type="module">document.addEventListener("astro:page-load",()=>{const i=new IntersectionObserver(t=>{t.forEach(r=>{r.isIntersecting&&document.querySelectorAll(".nav-link").forEach(e=>{e.classList.remove("text-green-400","bg-white/10","font-semibold"),e.classList.add("text-gray-400"),e.getAttribute("href")==="#"+r.target.id&&(e.classList.remove("text-gray-400"),e.classList.add("text-green-400","bg-white/10","font-semibold"))})})},{rootMargin:"-100px 0px -70% 0px"});document.querySelectorAll("main > div[id]").forEach(t=>{i.observe(t)});const o=document.getElementById("mobile-menu-btn"),s=document.getElementById("docs-sidebar");o&&s&&o.addEventListener("click",()=>{s.classList.toggle("hidden")}),document.querySelectorAll(".nav-link").forEach(t=>{t.addEventListener("click",r=>{const e=t.getAttribute("href").substring(1),n=document.getElementById(e);n&&(r.preventDefault(),n.scrollIntoView({behavior:"smooth"}),history.pushState(null,"","#"+e))})})});</script>  </div> </div> </div> </main> </body></html>

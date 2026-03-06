@@ -1,0 +1,35 @@
+{
+  "name": "Record10 - Record Flow",
+  "short_name": "Record Flow",
+  "description": "No-Code Workflow Automation Platform",
+  "icons": [
+    {
+      "src": "/r10.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/RF-Logo-Square.png",
+      "sizes": "2000x2000",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#16a34a",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
