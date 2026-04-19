@@ -1,0 +1,54 @@
+# Place this file at .github/workflows/deploy.yml in the PUBLIC repo (pritraj/record10-website-public)
+#
+# REQUIRED SECRETS (Repository Level - pritraj/record10-website-public):
+#   - PRIVATE_REPO_PAT: Fine-grained PAT with Contents:Read on Pritraj/record10-website
+#
+name: Deploy Website
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to build from (private repo)"
+        required: true
+        default: "main"
+        type: choice
+        options:
+          - main
+          - dev
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone private repository
+        shell: bash
+        run: |
+          git clone --depth 1 --branch ${{ inputs.branch }} \
+            https://x-access-token:${{ secrets.PRIVATE_REPO_PAT }}@github.com/Pritraj/record10-website.git .
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Astro site
+        run: npm run build
+
+      - name: Deploy to gh-pages of this public repo
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd dist
+          git init
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "Deploy from private repo - $(date)"
+          git push -f https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:gh-pages
