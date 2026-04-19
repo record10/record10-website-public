@@ -20,16 +20,18 @@ on:
           - dev
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Clone private repository
         shell: bash
         run: |
-          git clone --depth 1 --branch ${{ inputs.branch }} \
+          git clone --depth 1 --branch ${{ inputs.branch || 'main' }} \
             https://x-access-token:${{ secrets.PRIVATE_REPO_PAT }}@github.com/Pritraj/record10-website.git .
 
       - name: Setup Node.js
@@ -43,14 +45,18 @@ jobs:
       - name: Build Astro site
         run: npm run build
 
-      - name: Deploy to gh-pages of this public repo
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          cd dist
-          git init
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add -A
-          git commit -m "Deploy from private repo - $(date)"
-          git push -f https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:gh-pages
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
